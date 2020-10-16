@@ -1,6 +1,6 @@
 baseURL = "http://yeves.cn/"
 languageCode = "zh-CN"
-title = "风行天下"
+title = "风行天下的博客"
 theme = "maupassant"
 googleAnalytics = ""
 
@@ -45,10 +45,24 @@ summaryLength = 140
     link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 ## 配置代码高亮
+#[markup]
+#  [markup.highlight]
+#    lineNos = true
+#    style = "github"
+
 [markup]
   [markup.highlight]
-    lineNos = true
-    style = "github"
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
 
 ## 配置网站菜单
 
