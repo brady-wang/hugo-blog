@@ -1,4 +1,4 @@
-baseURL = "http://blog.yeves.cn/"
+baseURL = "http://yeves.cn/"
 languageCode = "zh-CN"
 title = "风行天下"
 theme = "maupassant"
