@@ -4,37 +4,67 @@
   
   <url>
     <loc>http://blog.yeves.cn/categories/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.yeves.cn/tags/docker/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <loc>http://blog.yeves.cn/tags/Hugo/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <loc>http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/tags/linux/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://blog.yeves.cn/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/tags/nginx/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://blog.yeves.cn/post/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://blog.yeves.cn/tags/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://blog.yeves.cn/categories/%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2018-10-25T08:36:54-07:00</lastmod>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/tags/docker/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -80,11 +80,80 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/">Hugo-Linux下安装</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            主题地址 : https://github.com/flysnow-org/maupassant-hugo 下载安装 cd /usr/local/src wget https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_0.76.5_Linux-64bit.tar.gz tar -zxvf hugo_0.76.5_Linux-64bit.tar.gz mv ./hugo /usr/local/bin/ # 查看版本 [root@brady src]# hugo version Hugo Static Site Generator v0.76.5-60F0725B linux/amd64 BuildDate: 2020-10-14T15:15:49Z 新建网站 [root@brady hugo]# hugo new site blog Congratulations! Your new Hugo site is created in /phpwww/hugo/mysite. Just a few more steps and you're ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command. 2. Perhaps you want to add some content. You can add single files with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;. 3. Start the built-in live server via &quot;hugo server&quot;. Visit https://gohugo.io/ for quickstart guide and full documentation. 下载主题 cd blog;\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your……
+            <p class="readmore"><a href="http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux常用命令</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            linux 查看ip占用 netstat -tlunp|grep 80 杀死指定ip占用端口 sudo kill -9 $(lsof -i:18309 -t) 查看程序是否启动 ps -ef|grep redis soft 根据表生成实体 php bin/swoft entity:gen table=area_agent git 生成ssh ssh-keygen -t rsa……
+            <p class="readmore"><a href="http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">Nginx禁止html等缓存</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a>
+            
+        </div>
+        
+        <div class="post-content">
+            在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }……
+            <p class="readmore"><a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/">docker安装</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2018年10月25日
+            2020年10月15日
         </date>
         
         <div class="post-meta meta-category">
@@ -113,21 +182,10 @@
     <div>
         &copy; 2020 <a href="http://blog.yeves.cn/">my blog By brady</a>
         
-        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备XXXXXXX号-1</a>
+        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备18010513号</a>
         
     </div>
     <br />
-    <div>
-        <div class="github-badge">
-            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
-        </div>
-        <div class="github-badge">
-            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
-        </div>
-        <div class="github-badge">
-            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
-        </div>
-    </div>
 </footer>
 
 
@@ -159,6 +217,18 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
+    </li>
+    
+    <li>
+        <a href="http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/" title="Nginx禁止html等缓存">Nginx禁止html等缓存</a>
+    </li>
+    
+    <li>
         <a href="http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a>
     </li>
     
@@ -171,7 +241,7 @@
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="http://blog.yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (1)</a></li>
+    <li><a href="http://blog.yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (4)</a></li>
     
 </ul>
     </section>
@@ -180,7 +250,13 @@
         <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
 <div class="tagcloud">
     
+    <a href="http://blog.yeves.cn/tags/Hugo/">Hugo</a>
+    
     <a href="http://blog.yeves.cn/tags/docker/">docker</a>
+    
+    <a href="http://blog.yeves.cn/tags/linux/">linux</a>
+    
+    <a href="http://blog.yeves.cn/tags/nginx/">nginx</a>
     
 </div>
     </section>
@@ -191,7 +267,7 @@
     <ul class="widget-list">
         
         <li>
-            <a target="_blank" href="https://www.baidu.com/" title="百度">百度</a>
+            <a target="_blank" href="https://www.cnblogs.com/brady-wang/" title="博客园">博客园</a>
         </li>
         
     </ul>

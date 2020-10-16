@@ -6,11 +6,11 @@
     <description>Recent content in docker on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 25 Oct 2018 08:36:54 -0700</lastBuildDate><atom:link href="http://blog.yeves.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.yeves.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker安装</title>
       <link>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</link>
-      <pubDate>Thu, 25 Oct 2018 08:36:54 -0700</pubDate>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</guid>
       <description>系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta</description>
