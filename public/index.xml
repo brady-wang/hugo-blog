@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>my blog</title>
+    <title>风行天下</title>
     <link>http://blog.yeves.cn/</link>
-    <description>Recent content on my blog</description>
+    <description>Recent content on 风行天下</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.yeves.cn/index.xml" rel="self" type="application/rss+xml" />
@@ -41,6 +41,15 @@
       
       <guid>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</guid>
       <description>系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta</description>
+    </item>
+    
+    <item>
+      <title>git设置别名</title>
+      <link>http://blog.yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</guid>
+      <description>git config --global alias.st status</description>
     </item>
     
     <item>

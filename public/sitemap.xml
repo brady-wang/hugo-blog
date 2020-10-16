@@ -28,11 +28,6 @@
   </url>
   
   <url>
-    <loc>http://blog.yeves.cn/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://blog.yeves.cn/tags/nginx/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
@@ -58,12 +53,27 @@
   </url>
   
   <url>
+    <loc>http://blog.yeves.cn/</loc>
+    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.yeves.cn/tags/docker/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/tags/git/</loc>
+    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url>
   

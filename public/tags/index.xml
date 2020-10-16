@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on my blog</title>
+    <title>Tags on 风行天下</title>
     <link>http://blog.yeves.cn/tags/</link>
-    <description>Recent content in Tags on my blog</description>
+    <description>Recent content in Tags on 风行天下</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -40,6 +40,15 @@
       <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.yeves.cn/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://blog.yeves.cn/tags/git/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.yeves.cn/tags/git/</guid>
       <description></description>
     </item>
     
