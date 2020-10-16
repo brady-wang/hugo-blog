@@ -1,4 +1,4 @@
-baseURL = "http://hugo.cn/"
+baseURL = "http://blog.yeves.cn/"
 languageCode = "zh-CN"
 title = "my blog"
 theme = "maupassant"
@@ -25,12 +25,7 @@ summaryLength = 140
   busuanzi = true #启用不算子网页统计
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
   localSearch = true # 启用本地搜索
-
-  # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
-  customCSS = ['douban.css', 'other.css']
-  # if ['custom.css'], load '/static/css/custom.css' file
-  customJS = ['douban.js']
-  # if ['custom.js'], load '/static/js/custom.js' file
+  beian = "粤ICP备18010513号"
 
   # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
   toc = false  # 是否开启目录
@@ -38,9 +33,9 @@ summaryLength = 140
 ## 友情链接，可以多个
 
 [[params.links]]
-  title = "百度"
-  name = "百度"
-  url = "https://www.baidu.com/"
+  title = "博客园"
+  name = "博客园"
+  url = "https://www.cnblogs.com/brady-wang/"
 
 
 

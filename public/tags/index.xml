@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on my blog</title>
-    <link>http://hugo.cn/tags/</link>
+    <link>http://blog.yeves.cn/tags/</link>
     <description>Recent content in Tags on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Dec 2019 21:55:00 +0800</lastBuildDate><atom:link href="http://hugo.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Oct 2018 08:36:54 -0700</lastBuildDate><atom:link href="http://blog.yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>golang</title>
-      <link>http://hugo.cn/tags/golang/</link>
-      <pubDate>Wed, 18 Dec 2019 21:55:00 +0800</pubDate>
+      <title>docker</title>
+      <link>http://blog.yeves.cn/tags/docker/</link>
+      <pubDate>Thu, 25 Oct 2018 08:36:54 -0700</pubDate>
       
-      <guid>http://hugo.cn/tags/golang/</guid>
+      <guid>http://blog.yeves.cn/tags/docker/</guid>
       <description></description>
     </item>
     
