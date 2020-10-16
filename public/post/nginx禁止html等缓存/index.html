@@ -9,21 +9,24 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     
 
-    <title>Posts | my blog</title>
-    <meta property="og:title" content="Posts - my blog">
+    <title>Nginx禁止html等缓存 | my blog</title>
+    <meta property="og:title" content="Nginx禁止html等缓存 - my blog">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-10-16T00:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-10-16T00:00:00&#43;08:00'>
         
     <meta name="Keywords" content="brady">
-    <meta name="description" content="Posts">
+    <meta name="description" content="Nginx禁止html等缓存">
         
     <meta name="author" content="brady">
-    <meta property="og:url" content="http://blog.yeves.cn/post/">
+    <meta property="og:url" content="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="http://blog.yeves.cn/post/index.xml" title="my blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -69,12 +72,9 @@
                     
 <div class="res-cons">
     
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/" title="Nginx禁止html等缓存">Nginx禁止html等缓存</a>
-            </h1>
+            <h1 class="post-title">Nginx禁止html等缓存</h1>
         </header>
         <date class="post-meta meta-date">
             2020年10月16日
@@ -87,94 +87,73 @@
             
         </div>
         
-        <div class="post-content">
-            在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }……
-        </div>
-        <p class="readmore"><a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月16日
-        </date>
         
         <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a></span>
-            
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
         </div>
         
+        
         <div class="post-content">
-            linux 查看ip占用 netstat -tlunp|grep 80 杀死指定ip占用端口 sudo kill -9 $(lsof -i:18309 -t) 查看程序是否启动 ps -ef|grep redis soft 根据表生成实体 php bin/swoft entity:gen table=area_agent git 生成ssh ssh-keygen -t rsa……
+            <ol>
+<li>
+<p>在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下：</p>
+<pre><code>location ~.*\.(js|css|html|png|jpg)$
+{
+    add_header Cache-Control no-cache;
+}   
+</code></pre></li>
+</ol>
+
         </div>
-        <p class="readmore"><a href="http://blog.yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文</a></p>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://blog.yeves.cn/">brady</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">http://blog.yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/hugo-centos%E5%AE%89%E8%A3%85/">Hugo-Linux下安装</a></li>
+        
+        <li><a href="/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux常用命令</a></li>
+        
+        <li><a href="/post/docker%E5%AE%89%E8%A3%85/">docker安装</a></li>
+        
+        <li><a href="/about/">关于我</a></li>
+        
+        <li><a href="/archives/">归档</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/nginx'>nginx</a></li>
+                
+            </ul>
+            
+        </div>
     </article>
     
     
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月16日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            主题地址 : https://github.com/flysnow-org/maupassant-hugo 下载安装 cd /usr/local/src wget https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_0.76.5_Linux-64bit.tar.gz tar -zxvf hugo_0.76.5_Linux-64bit.tar.gz mv ./hugo /usr/local/bin/ # 查看版本 [root@brady src]# hugo version Hugo Static Site Generator v0.76.5-60F0725B linux/amd64 BuildDate: 2020-10-14T15:15:49Z 新建网站 [root@brady hugo]# hugo new site blog Congratulations! Your new Hugo site is created in /phpwww/hugo/mysite. Just a few more steps and you're ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command. 2. Perhaps you want to add some content. You can add single files with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;. 3. Start the built-in live server via &quot;hugo server&quot;. Visit https://gohugo.io/ for quickstart guide and full documentation. 下载主题 cd blog;\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your……
-        </div>
-        <p class="readmore"><a href="http://blog.yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月15日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta……
-        </div>
-        <p class="readmore"><a href="http://blog.yeves.cn/post/docker%E5%AE%89%E8%A3%85/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
-
-
-
-
+    
+    
 </div>
 
                     <footer id="footer">
@@ -188,6 +167,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
