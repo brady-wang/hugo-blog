@@ -16,5 +16,14 @@
       <description>系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta</description>
     </item>
     
+    <item>
+      <title>docker阿里云加速</title>
+      <link>http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/</guid>
+      <description>阿里云提供的个人加速 在linux下执行以下命令即可 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&#39;EOF&#39; { &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://a4fyjv0u.mirror.aliyuncs.com&amp;quot;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker</description>
+    </item>
+    
   </channel>
 </rss>
