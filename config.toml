@@ -15,12 +15,12 @@ summaryLength = 140
 
 
 [author]
-  name = "brady"
+  name = "风行天下"
 
 [params]
   author = "风行天下"
   subtitle = ""
-  keywords = "brady"
+  keywords = "风行天下"
   description = "天地不仁 以万物为刍狗"
   busuanzi = true #启用不算子网页统计
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
