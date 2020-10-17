@@ -6,7 +6,16 @@
     <description>Recent content on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2020 12:51:41 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 13:43:31 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh免密登录</title>
+      <link>http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</link>
+      <pubDate>Sat, 17 Oct 2020 13:43:31 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</guid>
+      <description>原因 每次登录都要ssh -p wang@xx.xx.xx.xx 虽然做了公钥验证 https://www.cnblogs.com/php-linux/p/10795913.html 不需要输入密码，但是每次还是要输入域名，有点麻烦 设置方式 进入到.ssh目录 也是就是 id_rsa.pub目录 vim config 1 2 3 4 5 Host wang 这个是个标识 不是远程用户 HostName ip地址 Port 22 User wang IdentityFile ~/.ssh/id_rsa ssh wang 即可登录 如果还想要快速用root登录 1 2 3 4 5 6 7 8 9 10 11 Host wang</description>
+    </item>
+    
     <item>
       <title>工具</title>
       <link>http://yeves.cn/tools/</link>
