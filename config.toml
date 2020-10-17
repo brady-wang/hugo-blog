@@ -54,11 +54,11 @@ summaryLength = 140
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
     lineAnchors = ""
-    lineNoStart = 1
-    lineNos = false
+    lineNoStart =1
+    lineNos = true
     lineNumbersInTable = true
     noClasses = true
     style = "monokai"

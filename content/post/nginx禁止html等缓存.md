@@ -1,5 +1,5 @@
 +++
-date="2020-10-16"
+date="2020-10-17T10:21:00+08:00"
 title="Nginx禁止html等缓存"
 tags=["nginx"]
 categories=["运维"]

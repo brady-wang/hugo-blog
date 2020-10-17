@@ -1,8 +1,10 @@
 +++
-date="2020-10-15"
+date="2020-10-15T21:00:00+08:00"
 title="docker安装"
 tags=["docker"]
 categories=["运维"]
+url="/2020/10/15/docker安装.html"
+
 +++
 
 > 系统: centos7
@@ -71,7 +73,7 @@ categories=["运维"]
 
 11. 配置个人阿里云加速
 
-    ```
+    ``` go
     sudo mkdir -p /etc/docker
     sudo tee /etc/docker/daemon.json <<-'EOF'
     {

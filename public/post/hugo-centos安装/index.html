@@ -13,10 +13,10 @@
     <meta property="og:title" content="Hugo-Linux下安装 - 风行天下的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-10-16T00:00:00&#43;08:00'>
+    <meta property="article:published_time" content='2020-10-16T02:00:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-10-16T00:00:00&#43;08:00'>
+    <meta property="article:modified_time" content='2020-10-16T02:00:00&#43;08:00'>
         
     <meta name="Keywords" content="风行天下">
     <meta name="description" content="Hugo-Linux下安装">
@@ -71,7 +71,100 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
     <article class="post">
         <header>
             <h1 class="post-title">Hugo-Linux下安装</h1>
@@ -94,6 +187,12 @@
         </div>
         
         
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
         <div class="post-content">
             <blockquote>
 <p>主题地址 :  <a href="https://github.com/flysnow-org/maupassant-hugo">https://github.com/flysnow-org/maupassant-hugo</a></p>
@@ -101,7 +200,19 @@
 <ol>
 <li><strong>下载安装</strong></li>
 </ol>
-<pre><code>cd /usr/local/src
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd /usr/local/src
 wget https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_0.76.5_Linux-64bit.tar.gz
 tar -zxvf hugo_0.76.5_Linux-64bit.tar.gz
 mv ./hugo /usr/local/bin/
@@ -109,47 +220,97 @@ mv ./hugo /usr/local/bin/
 # 查看版本
 [root@brady src]# hugo version
 Hugo Static Site Generator v0.76.5-60F0725B linux/amd64 BuildDate: 2020-10-14T15:15:49Z
-</code></pre><ol start="2">
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
 <li><strong>新建网站</strong></li>
 </ol>
-<pre><code>[root@brady hugo]# hugo new site blog
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[root@brady hugo]# hugo new site blog
 Congratulations! Your new Hugo site is created in /phpwww/hugo/mysite.
 
-Just a few more steps and you're ready to go:
+Just a few more steps and you&#39;re ready to go:
 
 1. Download a theme into the same-named folder.
    Choose a theme from https://themes.gohugo.io/ or
-   create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
 2. Perhaps you want to add some content. You can add single files
-   with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
-3. Start the built-in live server via &quot;hugo server&quot;.
+   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
 
 Visit https://gohugo.io/ for quickstart guide and full documentation.
 
-</code></pre><ol start="3">
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
 <li>下载主题</li>
 </ol>
-<pre><code>cd blog;\
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd blog;\
 git init;\
 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
 
 # Edit your config.toml configuration file
 # and add the Ananke theme.
-echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
-</code></pre><ol start="4">
+echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
 <li><strong>添加一篇文章</strong></li>
 </ol>
-<pre><code class="language-hugo" data-lang="hugo">hugo new posts/my-first-post.md 
-</code></pre><ol start="5">
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo new posts/my-first-post.md 
+</code></pre></td></tr></table>
+</div>
+</div><ol start="5">
 <li>
 <p><strong>运行查看效果</strong>
 <code>hugo server -D</code></p>
 </li>
 <li>
 <p><strong>使用新的Hugo maupassant主题</strong></p>
-<pre><code>  cd blog
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  cd blog
   git clone https://github.com/rujews/maupassant-hugo themes/maupassant
-</code></pre><p>然后在Hugo的配置文件里config.toml(yaml,json)中进行如下配置，即可使用。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在Hugo的配置文件里config.toml(yaml,json)中进行如下配置，即可使用。</p>
 <p><code>theme = &quot;maupassant&quot;</code></p>
 <p>记得把你的MD文章放在content/post目录下。</p>
 </li>
@@ -158,55 +319,110 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <p>Hugo maupassant 主题配置也不难，是否熟悉Hugo都可以快速配置，并生成自己的网站。
 我博客的配置如下，大家可以参考。</p>
 <p><em>config.toml</em></p>
-<pre><code>baseURL = &quot;http://www.flysnow.org&quot;
-languageCode = &quot;zh-CN&quot;
-title = &quot;飞雪无情的博客&quot;
-theme = &quot;maupassant&quot;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">baseURL = &#34;http://www.flysnow.org&#34;
+languageCode = &#34;zh-CN&#34;
+title = &#34;飞雪无情的博客&#34;
+theme = &#34;maupassant&#34;
    
 [author]
-  name = &quot;飞雪无情&quot;
+  name = &#34;飞雪无情&#34;
    
 [params]
-  author = &quot;飞雪无情&quot;
-  subtitle = &quot;专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构&quot;
-  keywords = &quot;golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序&quot;
-  description = &quot;专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等&quot;
-</code></pre></li>
+  author = &#34;飞雪无情&#34;
+  subtitle = &#34;专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构&#34;
+  keywords = &#34;golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序&#34;
+  description = &#34;专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等&#34;
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p><strong>Hugo maupassant 自定义菜单</strong></p>
 <p>原作者的菜单是基于Content Type实现的，扩展性很差。Hugo本身有菜单的支持，扩展性更好，所以我改为基于Hugo原生菜单的方式实现，可以无限级扩展、支持菜单排序。</p>
 <p><em>config.toml</em></p>
-<pre><code>[menu]
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[menu]
   [[menu.main]]
-    identifier = &quot;books&quot;
-    name = &quot;新书&quot;
-    url = &quot;/books/&quot;
+    identifier = &#34;books&#34;
+    name = &#34;新书&#34;
+    url = &#34;/books/&#34;
     weight = 2
   [[menu.main]]
-    identifier = &quot;archives&quot;
-    name = &quot;归档&quot;
-    url = &quot;/archives/&quot;
+    identifier = &#34;archives&#34;
+    name = &#34;归档&#34;
+    url = &#34;/archives/&#34;
     weight = 3
   [[menu.main]]
-    identifier = &quot;about&quot;
-    name = &quot;关于&quot;
-    url = &quot;/about/&quot;
+    identifier = &#34;about&#34;
+    name = &#34;关于&#34;
+    url = &#34;/about/&#34;
     weight = 4
-</code></pre><p><code>identifier</code>标志符必须是唯一的，不能重复；<code>weight</code>用于排序，值越小越靠前。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>identifier</code>标志符必须是唯一的，不能重复；<code>weight</code>用于排序，值越小越靠前。</p>
 </li>
 <li>
 <p>Hugo maupassant 友情链接</p>
 <p>友情链接的实现也是遵循Hugo原生的方式，参考配置如下：</p>
 <p><em>config.toml</em></p>
-<pre><code>[[params.links]]
-  title = &quot;Android Gradle权威指南&quot;
-  name = &quot;Android Gradle权威指南&quot;
-  url = &quot;http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e&quot;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[[params.links]]
+  title = &#34;Android Gradle权威指南&#34;
+  name = &#34;Android Gradle权威指南&#34;
+  url = &#34;http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e&#34;
 [[params.links]]
-  title = &quot;常用开发工具CDN镜像&quot;
-  name = &quot;常用开发工具CDN镜像&quot;
-  url = &quot;http://mirrors.flysnow.org/&quot;
-</code></pre><blockquote>
+  title = &#34;常用开发工具CDN镜像&#34;
+  name = &#34;常用开发工具CDN镜像&#34;
+  url = &#34;http://mirrors.flysnow.org/&#34;
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>params.links<code>是一个数组，所以我们可以自定义很多友情链接。</code>name<code>表示显示的链接文本，</code>title`表示鼠标悬停在友情链接时，显示的文本。</p>
 </blockquote>
 </li>
@@ -223,7 +439,7 @@ theme = &quot;maupassant&quot;
 ​ <br>
 ​    &gt; <code>title</code>和<code>description</code>都可以换成你自己的，但是<code>type</code>必须是<code>archives</code>。
 ​ <br>
-​    &gt;   content/archives/index.md<code>表示在</code>content/archives/<code>目录下的</code>index.md<code>文件 ​     &gt; 这样Hugo就会自动生成</code>/archives/index.html<code>归档页面，通过类似</code><a href="http://www.flysnow.org/archives/%60">http://www.flysnow.org/archives/`</a>的URL进行访问，目前的归档是按照年份进行归档， 后面可以扩展更多的归档方式。
+​    &gt;   content/archives/index.md<code>表示在</code>content/archives/<code>目录下的</code>index.md<code>文件 ​     &gt; 这样Hugo就会自动生成</code>/archives/index.html<code>归档页面，通过类似</code><a href="http://www.flysnow.org/archives/%60">http://www.flysnow.org/archives/`</a>的URL进行访问，目前的归档是按照年份进行归档， 后面可以扩展更多的归档方式。
 &gt;
 &gt;</p>
 <ol start="11">
@@ -263,15 +479,15 @@ theme = &quot;maupassant&quot;
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">Nginx禁止html等缓存</a></li>
+        <li><a href="/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/">docker阿里云加速</a></li>
         
-        <li><a href="/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux常用命令</a></li>
+        <li><a href="/2020/10/15/docker%E5%AE%89%E8%A3%85.html">docker安装</a></li>
         
-        <li><a href="/post/docker%E5%AE%89%E8%A3%85/">docker安装</a></li>
-        
-        <li><a href="/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/">git设置别名</a></li>
+        <li><a href="/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/">git submodule添加删除</a></li>
         
         <li><a href="/about/">关于我</a></li>
+        
+        <li><a href="/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/">git设置别名</a></li>
         
     </ul>
 </div>
@@ -298,17 +514,21 @@ theme = &quot;maupassant&quot;
     <div>
         &copy; 2020 <a href="http://yeves.cn/">风行天下的博客 By 风行天下</a>
         
-
-
+        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备18010513号</a>
         
-        <div style="padding-top:10px;">
-            <a href="https://github.com/gohugoio/hugo" target="_black" rel="nofollow"><span >Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
-            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span >Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
-            |<a rel="nofollow" target="_blank" href="http://www.chaicp.com/">粤ICP备18010513号</a>
-        </div>
-
     </div>
     <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
 </footer>
 
 
@@ -350,11 +570,7 @@ theme = &quot;maupassant&quot;
 <ul class="widget-list">
     
     <li>
-        <a href="http://yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
-    </li>
-    
-    <li>
-        <a href="http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
+        <a href="http://yeves.cn/post/hugo%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3Maupassant%E6%96%87%E6%A1%A3/" title="hugo主题文档manpassant">hugo主题文档manpassant</a>
     </li>
     
     <li>
@@ -362,11 +578,35 @@ theme = &quot;maupassant&quot;
     </li>
     
     <li>
-        <a href="http://yeves.cn/post/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a>
+        <a href="http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/" title="各类软件激活">各类软件激活</a>
     </li>
     
     <li>
-        <a href="http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/" title="git设置别名">git设置别名</a>
+        <a href="http://yeves.cn/post/%E8%AE%BE%E7%BD%AE-Hugo-%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/" title="设置Hugo的代码高亮">设置Hugo的代码高亮</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/Go-%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-Go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" title="Go语言教程学习目录">Go语言教程学习目录</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/" title="docker阿里云加速">docker阿里云加速</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html" title="docker安装">docker安装</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/" title="git submodule添加删除">git submodule添加删除</a>
     </li>
     
 </ul>
@@ -378,7 +618,13 @@ theme = &quot;maupassant&quot;
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="http://yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (5)</a></li>
+    <li><a href="http://yeves.cn/categories/Go/">Go (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/git/">git (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E5%BC%80%E5%8F%91/">开发 (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (7)</a></li>
     
 </ul>
     </section>
@@ -387,15 +633,37 @@ theme = &quot;maupassant&quot;
         <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
 <div class="tagcloud">
     
+    <a href="http://yeves.cn/tags/Go/">Go</a>
+    
     <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
     
     <a href="http://yeves.cn/tags/docker/">docker</a>
     
     <a href="http://yeves.cn/tags/git/">git</a>
     
+    <a href="http://yeves.cn/tags/goland/">goland</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/idea/">idea</a>
+    
     <a href="http://yeves.cn/tags/linux/">linux</a>
     
+    <a href="http://yeves.cn/tags/navicat/">navicat</a>
+    
     <a href="http://yeves.cn/tags/nginx/">nginx</a>
+    
+    <a href="http://yeves.cn/tags/photoshop/">photoshop</a>
+    
+    <a href="http://yeves.cn/tags/phpstorm/">phpstorm</a>
+    
+    <a href="http://yeves.cn/tags/pycharm/">pycharm</a>
+    
+    <a href="http://yeves.cn/tags/webstorm/">webstorm</a>
+    
+    <a href="http://yeves.cn/tags/%E4%B8%BB%E9%A2%98/">主题</a>
+    
+    <a href="http://yeves.cn/tags/%E6%BF%80%E6%B4%BB/">激活</a>
     
 </div>
     </section>

@@ -6,11 +6,11 @@
     <description>Recent content in linux on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://yeves.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 12:10:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux常用命令</title>
       <link>http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 16 Oct 2020 12:10:00 +0800</pubDate>
       
       <guid>http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>linux 查看ip占用 netstat -tlunp|grep 80 杀死指定ip占用端口 sudo kill -9 $(lsof -i:18309 -t) 查看程序是否启动 ps -ef|grep redis soft 根据表生成实体 php bin/swoft entity:gen table=area_agent git 生成ssh ssh-keygen -t rsa</description>

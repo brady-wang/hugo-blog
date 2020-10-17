@@ -1,10 +1,9 @@
 +++
-
-date="2020-10-16"
+date="2020-10-16T02:00:00+08:00"
 title="Hugo-Linux下安装"
 tags=["Hugo"]
 categories=["运维"]
-
+toc=true
 +++
 
 >   主题地址 :  https://github.com/flysnow-org/maupassant-hugo
