@@ -8,12 +8,21 @@
     <language>zh-CN</language>
     <lastBuildDate>Sat, 17 Oct 2020 12:51:41 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>工具</title>
+      <link>http://yeves.cn/tools/</link>
+      <pubDate>Sat, 17 Oct 2020 13:18:35 +0800</pubDate>
+      
+      <guid>http://yeves.cn/tools/</guid>
+      <description>PyCharm https://shimo.im/docs/DJ3h3tJv98ppTYyH Idea https://shimo.im/docs/gqQDrjPkwwctk3VJ GoLand https://shimo.im/docs/dKYCkd8PrX3ckX99 PhpStorm https://shimo.im/docs/3cvvXQhGcGwy6hRQ WebStorm https://shimo.im/docs/RthD6t9cwTc8JwPV navicat15 https://www.cnblogs.com/brady-wang/p/12840970.html 个人百度网盘下载 PyCharm https://pan.baidu.com/s/1rLk77Ciuula7NiDhESBLPg 6x15 Idea https://pan.baidu.com/s/1gqfxY3D2z7gD8ywXdQ53xQ xrfy GoLand https://pan.baidu.com/s/1U8yNmlHtgpclIARNCsa-8w dey3 PhpStorm https://pan.baidu.com/s/1MM59gdRUkyYzx7BJOdL4Pg fx8n WebStorm https://pan.baidu.com/s/1JZwbh-QifNmooUpb6ra3xA w2xc photoshop https://pan.baidu.com/s/1qeLNTuxZ76dazeSJyAU6Fw vxa2 总激活地址 各软件激活教程： https://shimo.im/docs/WY3hd8Jt8KHgvVty</description>
+    </item>
+    
+    <item>
       <title>搜狗快捷输入当前时间</title>
       <link>http://yeves.cn/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</link>
       <pubDate>Sat, 17 Oct 2020 12:51:41 +0800</pubDate>
       
       <guid>http://yeves.cn/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</guid>
-      <description>hugo 写文章,开头要写时间 能不能有个快捷方式输出指定格式时间 date=&amp;quot;2020-10-17T08:00:22+08:00&amp;quot; 设置 偏好设置-&amp;gt;高级-&amp;gt;自定义短语设置-&amp;gt;新增 内容为 #$year-$month-$day_ddT$fullhour:$minute:$second+08:00 然后再中文状态下输入: **sj ** 返回: 2020-10-17T12:49:21+08:00</description>
+      <description>hugo 写文章,开头要写时间 能不能有个快捷方式输出指定格式时间 date=&amp;quot;2020-10-17T08:00:22+08:00&amp;quot; 设置 偏好设置-&amp;gt;高级-&amp;gt;自定义短语设置-&amp;gt;新增 内容为 #$year-$month-$day_ddT$fullhour:$minute:$second+08:00 然后再中文状态下输入: **sj ** 返回: 2020-10-17T12:49:21+08:00 这里再提供一下，搜狗输入法的更多时间函数： 函数 含义 举例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
     </item>
     
     <item>
@@ -351,15 +360,6 @@ type: archives
     </item>
     
     <item>
-      <title>各类软件激活</title>
-      <link>http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/</link>
-      <pubDate>Sat, 17 Oct 2020 09:00:00 +0800</pubDate>
-      
-      <guid>http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/</guid>
-      <description>PyCharm https://shimo.im/docs/DJ3h3tJv98ppTYyH Idea https://shimo.im/docs/gqQDrjPkwwctk3VJ GoLand https://shimo.im/docs/dKYCkd8PrX3ckX99 PhpStorm https://shimo.im/docs/3cvvXQhGcGwy6hRQ WebStorm https://shimo.im/docs/RthD6t9cwTc8JwPV navicat15 https://www.cnblogs.com/brady-wang/p/12840970.html 个人百度网盘下载 PyCharm https://pan.baidu.com/s/1rLk77Ciuula7NiDhESBLPg 6x15 Idea https://pan.baidu.com/s/1gqfxY3D2z7gD8ywXdQ53xQ xrfy GoLand https://pan.baidu.com/s/1U8yNmlHtgpclIARNCsa-8w dey3 PhpStorm https://pan.baidu.com/s/1MM59gdRUkyYzx7BJOdL4Pg fx8n WebStorm https://pan.baidu.com/s/1JZwbh-QifNmooUpb6ra3xA w2xc photoshop https://pan.baidu.com/s/1qeLNTuxZ76dazeSJyAU6Fw vxa2 总激活地址 各软件激活教程： https://shimo.im/docs/WY3hd8Jt8KHgvVty</description>
-    </item>
-    
-    <item>
       <title>设置Hugo的代码高亮</title>
       <link>http://yeves.cn/post/%E8%AE%BE%E7%BD%AE-Hugo-%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</link>
       <pubDate>Sat, 17 Oct 2020 08:00:22 +0800</pubDate>
@@ -437,7 +437,7 @@ type: archives
       <pubDate>Tue, 10 Mar 2015 00:13:27 +0000</pubDate>
       
       <guid>http://yeves.cn/about/</guid>
-      <description>about me 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为刍狗 天地不仁以万物为</description>
+      <description>about me 人生若只如初见 何事秋风悲画扇</description>
     </item>
     
     <item>

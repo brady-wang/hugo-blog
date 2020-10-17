@@ -2,7 +2,7 @@
 date="2020-10-15T22:00:00+08:00"
 title="docker阿里云加速"
 tags=["docker"]
-categories=["运维"]
+categories=["docker"]
 +++ 
 
 ## 阿里云提供的个人加速

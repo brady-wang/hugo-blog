@@ -3,7 +3,7 @@
 date="2020-10-17T10:32:00+08:00"
 title="hugo主题文档manpassant"
 tags=["hugo","主题"]
-categories=["Go"]
+categories=["Hugo"]
 toc=true
 
 +++

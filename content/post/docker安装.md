@@ -2,7 +2,7 @@
 date="2020-10-15T21:00:00+08:00"
 title="docker安装"
 tags=["docker"]
-categories=["运维"]
+categories=["docker"]
 url="/2020/10/15/docker安装.html"
 
 +++

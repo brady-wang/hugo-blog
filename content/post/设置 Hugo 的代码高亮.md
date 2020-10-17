@@ -2,7 +2,7 @@
 date="2020-10-17T08:00:22+08:00"
 title="设置Hugo的代码高亮"
 tags=["hugo"]
-categories=["开发"]
+categories=["Hugo"]
 toc=true
 +++
 

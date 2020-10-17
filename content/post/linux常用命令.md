@@ -2,8 +2,7 @@
 date="2020-10-16T12:10:00+08:00"
 title="linux常用命令"
 tags=["linux"]
-categories=["运维"]
-toc=true
+categories=["Linux"]
 +++
 
 

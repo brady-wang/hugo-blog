@@ -2,7 +2,7 @@
 date="2020-10-17T11:00:00+08:00"
 title="hugo官方相关文档地址"
 tags=["hugo"]
-categories=["hugo"]
+categories=["Hugo"]
 +++
 
 
