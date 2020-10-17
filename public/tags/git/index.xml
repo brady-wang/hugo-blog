@@ -6,7 +6,16 @@
     <description>Recent content in git on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2020 23:00:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://yeves.cn/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git设置别名</title>
+      <link>http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</guid>
+      <description>git config --global alias.st status</description>
+    </item>
+    
     <item>
       <title>git submodule添加删除</title>
       <link>http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/</link>
@@ -14,15 +23,6 @@
       
       <guid>http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/</guid>
       <description>起因 hugo添加主题的时候 命令如下: git submodule add https://github.com/samrobbins85/hugo-developer-portfolio hugo-developer-portfolio ==纳尼 这是个什么鬼== 添加 添加子模块非常简单，命令如下： git submodule add 其中，url为子模块的路径，path为该子模块存储的目录路径。 执行成功后，git status会看到项目中修改了.gitmodules，并增加了一个新文件（为刚刚添加的路径</description>
-    </item>
-    
-    <item>
-      <title>git设置别名</title>
-      <link>http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</link>
-      <pubDate>Tue, 15 Oct 2019 23:00:00 +0800</pubDate>
-      
-      <guid>http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</guid>
-      <description>git config --global alias.st status</description>
     </item>
     
   </channel>
