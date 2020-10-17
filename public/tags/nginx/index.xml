@@ -6,14 +6,14 @@
     <description>Recent content in nginx on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://yeves.cn/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 10:21:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx禁止html等缓存</title>
       <link>http://yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 17 Oct 2020 10:21:00 +0800</pubDate>
       
       <guid>http://yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/</guid>
-      <description>在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }</description>
+      <description>在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： 1 2 3 4 location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }</description>
     </item>
     
   </channel>

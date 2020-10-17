@@ -73,11 +73,343 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://yeves.cn/post/hugo%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3Maupassant%E6%96%87%E6%A1%A3/" title="hugo主题文档manpassant">hugo主题文档manpassant</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月17日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Go'>Go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            <h1 id="maupassant">Maupassant</h1>
+<p>Maupassant theme, ported to Hugo.</p>
+<ol>
+<li>预览效果:<a href="http://www.flysnow.org">飞雪无情的博客</a></li>
+<li><a href="README_EN.md">English Docs</a></li>
+</ol>
+<p>一款非常简洁、性能高的Hugo主题，适配不同的设备（PC，Mobile等）。 主要是基于 Typecho <a href="https://github.com/pagecho/maupassant/">Cho</a>, 从 <a href="https://github.com/JokerQyou/maupassant-hugo">JokerQyou</a> forked，修改和添加了很多功能而成，如GA统计、最近的文章、标签云、自定义菜单、按日期归档等 .</p>
+<h2 id="功能特性">功能特性</h2>
+<ol>
+<li>支持Local Search 站内搜索</li>
+<li>最近发表的文章支持，显示最近的10篇</li>
+<li>分类支持，并且可以显示分类内的文章数量</li>
+<li>标签云支持</li>
+<li>文章目录支持</li>
+<li>一键回到页面顶部</li>
+<li>支持关键字SEO优化</li>
+<li>自定义菜单支持，不限个数，自定义排序</li>
+<li>自定义友情链接支持</li>
+<li>支持文章按年份日期进行归档</li>
+<li>支持GA分析统计</li>
+<li>不蒜子页面计数器支持</li>
+<li>代码高亮、代码行号</li>
+<li>sitemap站点地图</li>
+<li>RSS支持，并且可以自动发现RSS</li>
+<li>Google站内搜索</li>
+<li>See Also 支持</li>
+<li>Disqus评论支持</li>
+<li>自定义css、js</li>
+<li>utteranc评论</li>
+<li>部分自定义的shortcode</li>
+<li>文章自定义摘要</li>
+<li>自定义广告支持</li>
+<li>自定义备案信息</li>
+<li>自定义图片CDN</li>
+<li>图片点击放大</li>
+</ol>
+<h2 id="下载安装">下载安装</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd &lt;YOUR Bolg Root Dir&gt;
+git clone https://github.com/flysnow-org/maupassant-hugo themes/maupassant
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置">配置</h2>
+<h4 id="依赖要求">依赖要求</h4>
+<p>Hugo Version &gt;= v 0.60.0</p>
+<h4 id="应用主题">应用主题</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;maupassant&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="快速开始">快速开始</h4>
+<p>在主题的 <a href="exampleSite/">exampleSite</a> 示例目录下有<code>config.toml </code>文件，把<code>config.toml </code>文件复制到你的站点目录下，然后根据自己的需求修改即可</p>
+<p><strong>PS: 一定要使用<code>post</code>目录，而不是<code>posts</code>,一定要记住，所以如果你使用<code>hugo</code>命令，你应该<code>hugo new post/filename.md</code>这样创建</strong></p>
+<p><strong>PS: 一定要使用<code>post</code>目录，而不是<code>posts</code>,一定要记住，所以如果你使用<code>hugo</code>命令，你应该<code>hugo new post/filename.md</code>这样创建</strong></p>
+<p><strong>PS: 一定要使用<code>post</code>目录，而不是<code>posts</code>,一定要记住，所以如果你使用<code>hugo</code>命令，你应该<code>hugo new post/filename.md</code>这样创建</strong></p>
+<h4 id="代码高亮">代码高亮</h4>
+<p>从Hugo v0.60.0开始，默认使用<code>Goldmark</code>渲染MD文件，并且默认开启了代码高亮，所以该主题原来的代码高亮兼容出现问题，
+经过取舍，最终还是选用了Hugo原生的代码高亮方式，去掉了原来主题自带的基于JS的代码高亮。</p>
+<p>新的Hugo内置的代码高亮使用非常代码，默认不用任何配置就可以，如果你需要开启行号、或者更换代码样式，可以参考如下配置：</p>
+<p><em>config.toml</em></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
+  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+    <span style="color:#a6e22e">lineNos</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">style</span> = <span style="color:#e6db74">&#34;github&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>更多配合和样式参考:</p>
+<p><a href="https://gohugo.io/getting-started/configuration-markup">Configure Markup</a>
+<a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax Highlighting</a></p>
+<h4 id="自定义菜单">自定义菜单</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">menu</span>]
+
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;books&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;新书&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/books/&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;archives&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;归档&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+
+  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;关于&#34;</span>
+    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>identifier</code>标志符必须是唯一的，不能重复；<code>weight</code>用于排序，值越小越靠前。</p>
+<h4 id="文章目录大纲">文章目录（大纲）</h4>
+<p>该主题支持文章目录（大纲）,大纲是通过<code>h1~h7</code>标题自动生成，在MD文件里就是<code>##</code>这类标题的标记，这里建议最多使用两层文章目录，而且最好是从<code>h2</code>开始，便于SEO优化。
+如果要开启一篇文章的文章目录，只需要在<code>Front Matter</code> 添加<code>toc=true</code>即可，默认是不开启文章目录的。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">toc</span> = <span style="color:#66d9ef">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>当左侧空白空间宽度超过100px时，则显示悬浮目录。</p>
+<h4 id="local-search-站内搜索">Local Search 站内搜索</h4>
+<p>站内搜索默认是关闭的，如果需要使用需要以下步骤开启。</p>
+<ol>
+<li>检查<code>config.toml</code>的<code>disableKinds</code>配置项,是否禁用了RSS，如果禁用需要开启。</li>
+<li>在<code>config.toml</code>中找到<code>[params]</code>配置段落，增加<code>localSearch = true</code>开启站内搜索</li>
+<li>在<code>content</code>目录下新建<code>search</code>目录,并且在<code>search</code>目录中新建<code>index.md</code>文件，内容如下</li>
+</ol>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">---
+title: &#34;搜索&#34;
+description: &#34;搜索页面&#34;
+type: &#34;search&#34;
+---
+</code></pre></td></tr></table>
+</div>
+</div><p>然后<code>hugo server</code>启动，打开你的站点，就可以在右上角的搜索框里输入关键字进行站内搜索了。</p>
+<h4 id="友情链接">友情链接</h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">links</span>]]
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Android Gradle权威指南&#34;</span>
+  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Android Gradle权威指南&#34;</span>
+  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e&#34;</span>
+[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">links</span>]]
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;常用开发工具CDN镜像&#34;</span>
+  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;常用开发工具CDN镜像&#34;</span>
+  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;http://mirrors.flysnow.org/&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>params.links</code>是一个数组，所以我们可以自定义很多友情链接。<code>name</code>表示显示的链接文本，<code>title</code>表示鼠标悬停在友情链接时，显示的文本。</p>
+<h4 id="广告模块">广告模块</h4>
+<p>广告模块在侧边栏，可以灵活配置，让博主可以放一些超链接广告、或者图片链接广告。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">ads</span>]]
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;领取￥1888阿里云产品通用代金券&#34;</span>
+  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=jdg9oj97&#34;</span>
+
+[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">ads</span>]]
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;领取￥1888阿里云产品通用代金券&#34;</span>
+  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://promotion.aliyun.com/ntms/act/vmpt/aliyun-group/home.html?userCode=jdg9oj97&#34;</span>
+  <span style="color:#a6e22e">img</span> = <span style="color:#e6db74">&#34;https://img.alicdn.com/tfs/TB17qJhXpzqK1RjSZFvXXcB7VXa-200-126.jpg&#34;</span>
+[[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">ads</span>]]
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;领取￥1888阿里云产品通用代金券&#34;</span>
+  <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=jdg9oj97&#34;</span>
+  <span style="color:#a6e22e">img</span> = <span style="color:#e6db74">&#34;https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>params.ads</code>是一个数组，所以我们可以自定义很多广告。如果<code>img</code>存在，则优先使用图片广告,<code>title</code>表示鼠标悬停在广告链接时，显示的文本。</p>
+<p>具体效果参考 <a href="http://www.flysnow.org/">http://www.flysnow.org/</a></p>
+<h4 id="添加ga分析统计">添加GA分析统计</h4>
+<p>该主题已经支持了GA分析统计，只需要在<code>config.toml</code>配置里加入如下配置即可。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;GA ID&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文章归档支持">文章归档支持</h4>
+<p>Hugo默认是不支持生成归档文件的，需要自己实现。该主题已经实现了文章归档，只需要在新建<code>content/archives/index.md</code>文件，文件内容为：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">title: &#34;归档&#34;
+description: Android资深工程师 ，Go和Java打杂师，《Android Gradle权威指南》作者，Android官方技术文档译者
+type: archives
+</code></pre></td></tr></table>
+</div>
+</div><p><code>title</code>和<code>description</code>都可以换成你自己的，但是<code>type</code>必须是<code>archives</code>。</p>
+<p><code>content/archives/index.md</code>表示在<code>content/archives/</code>目录下的<code>index.md</code>文件</p>
+<h4 id="添加备案信息">添加备案信息</h4>
+<p>现在网站要求添加备案信息，本主题也进行了支持，使用方式非常简单，在<code>config.toml</code>的<code>params</code>配置中添加如下设置：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
+  <span style="color:#a6e22e">beian</span> = <span style="color:#e6db74">&#34;粤ICP备XXXXXXX号-1&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>以上配置中的备案信息要换成自己的</p>
+<h4 id="图片点击放大">图片点击放大</h4>
+<p>将会引入jquery.js 和 fancybox 的css和js</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
+  <span style="color:#a6e22e">fancybox</span> = <span style="color:#66d9ef">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="图片cdn">图片CDN</h4>
+<p>将会在mark中引入的图片src前面加上设置的host, 有http前缀的路径不会在前面加入host
+注意: 路径后面不要带/</p>
+<blockquote>
+<p>可直接使用jsdelivr加速 后面跟上github仓库即可</p>
+</blockquote>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">image_cdn</span>]
+    <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">Host</span> = <span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/user/user.github.io&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="disqus">Disqus</h4>
+<p>该主题支持Disqus评论，如果要启用Disqus，可以在<code>config.toml</code>里添加如下配置即可.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">disqusShortname</span> = <span style="color:#e6db74">&#34;yourdiscussshortname&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>替换成你自己的Disqus名字即可。</p>
+<h4 id="自定义文章摘要">自定义文章摘要</h4>
+<p>该主题采用了Hugo内置的摘要支持，大家可以通过`</p>……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/hugo%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3Maupassant%E6%96%87%E6%A1%A3/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/" title="Nginx禁止html等缓存">Nginx禁止html等缓存</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年10月16日
+            2020年10月17日
         </date>
         
         <div class="post-meta">
@@ -88,9 +420,86 @@
         </div>
         
         <div class="post-content">
-            在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }……
+            在本地开发的时候，经常会碰到缓存引起的莫名其妙的问题，最暴力的方式就是清掉浏览器的缓存，或者使用Ctrl + F5，Shift + F5强制刷新页面。 有时候按了好几下，缓存还是清不掉，只能暂时禁用浏览器静态资源缓存了，配置如下： 1 2 3 4 location ~.*\.(js|css|html|png|jpg)$ { add_header Cache-Control no-cache; }……
         </div>
         <p class="readmore"><a href="http://yeves.cn/post/nginx%E7%A6%81%E6%AD%A2html%E7%AD%89%E7%BC%93%E5%AD%98/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/" title="各类软件激活">各类软件激活</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月17日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a></span>
+            
+            <span class="meta-category"><a href='/categories/%E5%BC%80%E5%8F%91'>开发</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            PyCharm https://shimo.im/docs/DJ3h3tJv98ppTYyH Idea https://shimo.im/docs/gqQDrjPkwwctk3VJ GoLand https://shimo.im/docs/dKYCkd8PrX3ckX99 PhpStorm https://shimo.im/docs/3cvvXQhGcGwy6hRQ WebStorm https://shimo.im/docs/RthD6t9cwTc8JwPV navicat15 https://www.cnblogs.com/brady-wang/p/12840970.html 个人百度网盘下载 PyCharm https://pan.baidu.com/s/1rLk77Ciuula7NiDhESBLPg 6x15 Idea https://pan.baidu.com/s/1gqfxY3D2z7gD8ywXdQ53xQ xrfy GoLand https://pan.baidu.com/s/1U8yNmlHtgpclIARNCsa-8w dey3 PhpStorm https://pan.baidu.com/s/1MM59gdRUkyYzx7BJOdL4Pg fx8n WebStorm https://pan.baidu.com/s/1JZwbh-QifNmooUpb6ra3xA w2xc photoshop https://pan.baidu.com/s/1qeLNTuxZ76dazeSJyAU6Fw vxa2 总激活地址 各软件激活教程： https://shimo.im/docs/WY3hd8Jt8KHgvVty……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/%E8%AE%BE%E7%BD%AE-Hugo-%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/" title="设置Hugo的代码高亮">设置Hugo的代码高亮</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月17日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/%E5%BC%80%E5%8F%91'>开发</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            前提条件 首先我们要保证 Hugo 的版本是高于 v0.65.0 的，查询方法如下 1 2 $ hugo version Hugo Static Site Generator v0.70.0-7F47B99E windows/amd64 BuildDate: 2020-05-06T11:17:50Z 上面查询，我的版本是 v0.70.0 如果你的版本低于 v0.65.0 则不支持我们今天要设置的代码高亮，请先升级版本。 Hugo 在 v0.65.0 版本之后使用了 Chroma 代码高亮插件，它是一个 Go 语言实现的非常漂亮并能快速生成的代码高亮工具。 如何配置 默认的代码高……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/%E8%AE%BE%E7%BD%AE-Hugo-%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/Go-%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-Go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" title="Go语言教程学习目录">Go语言教程学习目录</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月17日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/Go'>Go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            《Go语言学习之路》博客目录。 2015年底我因为工作原因接触到了Go语言，那时网上关于Go语言的学习资料不多，我就边学边记笔记，一直坚持到现在。我把自己学习Go语言的笔记发布出来是希望能给Go语言社区出一点绵薄之力，帮助更多的人加入Gopher大家庭。 Go语言介绍 为什么你应该学习……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/Go-%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-Go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">阅读全文</a></p>
     </article>
     
     
@@ -138,34 +547,9 @@
         </div>
         
         <div class="post-content">
-            主题地址 : https://github.com/flysnow-org/maupassant-hugo 下载安装 cd /usr/local/src wget https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_0.76.5_Linux-64bit.tar.gz tar -zxvf hugo_0.76.5_Linux-64bit.tar.gz mv ./hugo /usr/local/bin/ # 查看版本 [root@brady src]# hugo version Hugo Static Site Generator v0.76.5-60F0725B linux/amd64 BuildDate: 2020-10-14T15:15:49Z 新建网站 [root@brady hugo]# hugo new site blog Congratulations! Your new Hugo site is created in /phpwww/hugo/mysite. Just a few more steps and you're ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command. 2. Perhaps you want to add some content. You can add single files with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;. 3. Start the built-in live server via &quot;hugo server&quot;. Visit https://gohugo.io/ for quickstart guide and full documentation. 下载主题 cd blog;\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your……
+            主题地址 : https://github.com/flysnow-org/maupassant-hugo 下载安装 1 2 3 4 5 6 7 8 cd /usr/local/src wget https://github.com/gohugoio/hugo/releases/download/v0.76.5/hugo_0.76.5_Linux-64bit.tar.gz tar -zxvf hugo_0.76.5_Linux-64bit.tar.gz mv ./hugo /usr/local/bin/ # 查看版本 [root@brady src]# hugo version Hugo Static Site Generator v0.76.5-60F0725B linux/amd64 BuildDate: 2020-10-14T15:15:49Z 新建网站 1 2 3 4 5 6 7 8 9 10 11 12 13 14 [root@brady hugo]# hugo new site blog Congratulations! Your new Hugo site is created in /phpwww/hugo/mysite. Just a few more steps and you&#39;re ready to go: 1. Download a theme into the same-named folder. Choose a theme from https://themes.gohugo.io/ or create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command. 2. Perhaps you want to add some content. You can add single files with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;. 3. Start the built-in live server via &#34;hugo server&#34;. Visit https://gohugo.io/……
         </div>
         <p class="readmore"><a href="http://yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/" title="git设置别名">git设置别名</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月15日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/%E8%BF%90%E7%BB%B4'>运维</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            git config --global alias.st status……
-        </div>
-        <p class="readmore"><a href="http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/">阅读全文</a></p>
     </article>
     
     
@@ -188,7 +572,7 @@
         </div>
         
         <div class="post-content">
-            阿里云提供的个人加速 在linux下执行以下命令即可 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF' { &quot;registry-mirrors&quot;: [&quot;https://a4fyjv0u.mirror.aliyuncs.com&quot;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker……
+            阿里云提供的个人加速 在linux下执行以下命令即可 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://a4fyjv0u.mirror.aliyuncs.com&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker……
         </div>
         <p class="readmore"><a href="http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/">阅读全文</a></p>
     </article>
@@ -198,7 +582,7 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="http://yeves.cn/post/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a>
+                <a href="http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html" title="docker安装">docker安装</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
@@ -215,13 +599,58 @@
         <div class="post-content">
             系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta……
         </div>
-        <p class="readmore"><a href="http://yeves.cn/post/docker%E5%AE%89%E8%A3%85/">阅读全文</a></p>
+        <p class="readmore"><a href="http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/" title="git submodule添加删除">git submodule添加删除</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月14日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/git'>git</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            起因 hugo添加主题的时候 命令如下: git submodule add https://github.com/samrobbins85/hugo-developer-portfolio hugo-developer-portfolio ==纳尼 这是个什么鬼== 添加 添加子模块非常简单，命令如下： git submodule add 其中，url为子模块的路径，path为该子模块存储的目录路径。 执行成功后，git status会看到项目中修改了.gitmodules，并增加了一个新文件（为刚刚添加的路径……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/">阅读全文</a></p>
     </article>
     
     
     
 
 
+
+<ol class="page-navigator">
+    
+
+    
+    <li  class="current">
+        <a href="http://yeves.cn/post/">1</a>
+    </li>
+    
+    <li >
+        <a href="http://yeves.cn/post/page/2/">2</a>
+    </li>
+    
+
+    
+    <li class="next">
+        <a href="http://yeves.cn/post/page/2/">下一页</a>
+    </li>
+    
+</ol>
 
 
 
@@ -277,11 +706,7 @@
 <ul class="widget-list">
     
     <li>
-        <a href="http://yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
-    </li>
-    
-    <li>
-        <a href="http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
+        <a href="http://yeves.cn/post/hugo%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3Maupassant%E6%96%87%E6%A1%A3/" title="hugo主题文档manpassant">hugo主题文档manpassant</a>
     </li>
     
     <li>
@@ -289,7 +714,23 @@
     </li>
     
     <li>
-        <a href="http://yeves.cn/post/docker%E5%AE%89%E8%A3%85/" title="docker安装">docker安装</a>
+        <a href="http://yeves.cn/post/%E5%90%84%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%BF%80%E6%B4%BB/" title="各类软件激活">各类软件激活</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/%E8%AE%BE%E7%BD%AE-Hugo-%E7%9A%84%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/" title="设置Hugo的代码高亮">设置Hugo的代码高亮</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/Go-%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B-Go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" title="Go语言教程学习目录">Go语言教程学习目录</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo-centos%E5%AE%89%E8%A3%85/" title="Hugo-Linux下安装">Hugo-Linux下安装</a>
     </li>
     
     <li>
@@ -297,7 +738,11 @@
     </li>
     
     <li>
-        <a href="http://yeves.cn/post/git%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/" title="git设置别名">git设置别名</a>
+        <a href="http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html" title="docker安装">docker安装</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/git-submodule%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4/" title="git submodule添加删除">git submodule添加删除</a>
     </li>
     
 </ul>
@@ -309,7 +754,13 @@
         <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
 <ul class="widget-list">
     
-    <li><a href="http://yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (6)</a></li>
+    <li><a href="http://yeves.cn/categories/Go/">Go (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/git/">git (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E5%BC%80%E5%8F%91/">开发 (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E8%BF%90%E7%BB%B4/">运维 (7)</a></li>
     
 </ul>
     </section>
@@ -318,15 +769,37 @@
         <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
 <div class="tagcloud">
     
+    <a href="http://yeves.cn/tags/Go/">Go</a>
+    
     <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
     
     <a href="http://yeves.cn/tags/docker/">docker</a>
     
     <a href="http://yeves.cn/tags/git/">git</a>
     
+    <a href="http://yeves.cn/tags/goland/">goland</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/idea/">idea</a>
+    
     <a href="http://yeves.cn/tags/linux/">linux</a>
     
+    <a href="http://yeves.cn/tags/navicat/">navicat</a>
+    
     <a href="http://yeves.cn/tags/nginx/">nginx</a>
+    
+    <a href="http://yeves.cn/tags/photoshop/">photoshop</a>
+    
+    <a href="http://yeves.cn/tags/phpstorm/">phpstorm</a>
+    
+    <a href="http://yeves.cn/tags/pycharm/">pycharm</a>
+    
+    <a href="http://yeves.cn/tags/webstorm/">webstorm</a>
+    
+    <a href="http://yeves.cn/tags/%E4%B8%BB%E9%A2%98/">主题</a>
+    
+    <a href="http://yeves.cn/tags/%E6%BF%80%E6%B4%BB/">激活</a>
     
 </div>
     </section>
