@@ -31,23 +31,23 @@ https://www.cnblogs.com/brady-wang/p/12840970.html
 ---
 ## 个人百度网盘下载
 - PyCharm
-    -  https://pan.baidu.com/s/1rLk77Ciuula7NiDhESBLPg 
-    -  6x15
+    -  https://pan.baidu.com/s/1d1YFfYf-e8fQrMceFSUHYQ 
+    -  wang
 - Idea 
-    - https://pan.baidu.com/s/1gqfxY3D2z7gD8ywXdQ53xQ
-    - xrfy
+    - https://pan.baidu.com/s/1Uwi0gyWkAyyw3Llu4t3qwg
+    - wang
 - GoLand
-    -  https://pan.baidu.com/s/1U8yNmlHtgpclIARNCsa-8w
-    -  dey3
+    -  https://pan.baidu.com/s/1enZSdn670KSoqLl9c81ZtA
+    -  wang
 - PhpStorm
-    - https://pan.baidu.com/s/1mkPgYH9PMfdV865QkdVN0g
-    - pc3h
+    - https://pan.baidu.com/s/1CrQ-OzLIDK7aKtAZY0x_Ww
+    - wang
 - WebStorm
-    - https://pan.baidu.com/s/1JZwbh-QifNmooUpb6ra3xA 
-    - w2xc
+    - https://pan.baidu.com/s/191pp2P7GTqjk-EAz6Fi8Sw 
+    - wang
 - photoshop
-    - https://pan.baidu.com/s/1qeLNTuxZ76dazeSJyAU6Fw
-    - vxa2
+    - https://pan.baidu.com/s/1J3vOv9VclDqmOC4lH3BQ7Q
+    - wang
 
 ## 总激活地址
 各软件激活教程： https://shimo.im/docs/WY3hd8Jt8KHgvVty

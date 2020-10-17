@@ -4,12 +4,42 @@
   
   <url>
     <loc>http://yeves.cn/categories/</loc>
-    <lastmod>2020-10-17T13:54:44+08:00</lastmod>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yeves.cn/post/</loc>
-    <lastmod>2020-10-17T13:54:44+08:00</lastmod>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/%E6%8F%90%E5%8F%96%E7%A0%81/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%90%E5%8F%96%E7%A0%81/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/</loc>
+    <lastmod>2020-10-17T14:20:47+08:00</lastmod>
   </url>
   
   <url>
@@ -28,16 +58,6 @@
   </url>
   
   <url>
-    <loc>http://yeves.cn/tags/</loc>
-    <lastmod>2020-10-17T13:54:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yeves.cn/</loc>
-    <lastmod>2020-10-17T13:54:44+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</loc>
     <lastmod>2020-10-17T13:43:31+08:00</lastmod>
   </url>
@@ -49,11 +69,6 @@
   
   <url>
     <loc>http://yeves.cn/tags/sougou/</loc>
-    <lastmod>2020-10-17T12:51:41+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yeves.cn/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-10-17T12:51:41+08:00</lastmod>
   </url>
   
