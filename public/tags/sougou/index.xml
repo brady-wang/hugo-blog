@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sougou on 风行天下的博客</title>
+    <link>http://yeves.cn/tags/sougou/</link>
+    <description>Recent content in sougou on 风行天下的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Oct 2020 12:51:41 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/sougou/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搜狗快捷输入当前时间</title>
+      <link>http://yeves.cn/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Sat, 17 Oct 2020 12:51:41 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</guid>
+      <description>hugo 写文章,开头要写时间 能不能有个快捷方式输出指定格式时间 date=&amp;quot;2020-10-17T08:00:22+08:00&amp;quot; 设置 偏好设置-&amp;gt;高级-&amp;gt;自定义短语设置-&amp;gt;新增 内容为 #$year-$month-$day_ddT$fullhour:$minute:$second+08:00 然后再中文状态下输入: **sj ** 返回: 2020-10-17T12:49:21+08:00</description>
+    </item>
+    
+  </channel>
+</rss>
