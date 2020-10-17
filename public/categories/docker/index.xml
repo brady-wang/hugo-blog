@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on 风行天下的博客</title>
+    <link>http://yeves.cn/categories/docker/</link>
+    <description>Recent content in docker on 风行天下的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 15 Oct 2020 22:00:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker阿里云加速</title>
+      <link>http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Thu, 15 Oct 2020 22:00:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/</guid>
+      <description>阿里云提供的个人加速 在linux下执行以下命令即可 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39; { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://a4fyjv0u.mirror.aliyuncs.com&amp;#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker</description>
+    </item>
+    
+    <item>
+      <title>docker安装</title>
+      <link>http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html</link>
+      <pubDate>Thu, 15 Oct 2020 21:00:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/2020/10/15/docker%E5%AE%89%E8%A3%85.html</guid>
+      <description>系统: centos7 Docker从1.13版本之后采用时间线的方式作为版本号，分为社区版CE和企业版EE。 社区版是免费提供给个人开发者和小型团体使用的，企业版会提供额外的收费服务，比如经过官方测试认证过的基础设施、容器、插件等。 社区版按照stable和edge两种方式发布，每个季度更新sta</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2020 13:43:31 +0800</lastBuildDate><atom:link href="http://yeves.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 13:54:44 +0800</lastBuildDate><atom:link href="http://yeves.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh设置远程拉取代码</title>
+      <link>http://yeves.cn/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sat, 17 Oct 2020 13:54:44 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+      <description>原因 hugo本地代码提交到github 服务器再拉取,然后线上网站页面才会生效 每次都要ssh -p 22 root@xx.xx.xxx.xx 到阿里云服务器,然后cd /www/blog git pull 而且阿里云服务器,隔一段时间不动,就会自己退出 有没有什么方式快速让远程服务器拉取到代码, 一种方式jenkins搭建 太麻烦 我的解决方式 首先设置免密登录 ssh root 就</description>
+    </item>
+    
     <item>
       <title>ssh免密登录</title>
       <link>http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</link>
