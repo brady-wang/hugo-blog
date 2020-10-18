@@ -22,7 +22,7 @@
       <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
       
       <guid>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-      <description>目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins。 凡是这里有的，都可以立刻生效。 autojump 安装地址 https://blog.csdn.net/shenhonglei1234/article/details/106674554 https://blog.csdn.net/java_road_far/article/details/101324677 autojump和z插件关系 autojump 需要单独安装，之后在 zshrc 文件启用，</description>
+      <description>目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins 凡是这里有的，都可以立刻生效。 autojump 安装地址 https://blog.csdn.net/shenhonglei1234/article/details/106674554 https://blog.csdn.net/java_road_far/article/details/101324677 autojump和z插件关系 autojump 需要单独安装，之后在 zshrc 文件启用，才</description>
     </item>
     
   </channel>

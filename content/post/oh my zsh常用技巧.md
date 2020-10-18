@@ -9,7 +9,7 @@ categories: ["shell"]
 
 ---
 
-目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins。
+目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
  凡是这里有的，都可以立刻生效。
 
 ## autojump
@@ -109,11 +109,15 @@ catimg 这个命令将图片文件的内容输出到命令行, 比如：
 
 语法高亮插件
 
+github地址: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
 
 
 
 ## Zsh命令自动补全插件 zsh-autosuggestions
+
+github地址: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
 这里利用Oh my zsh的方法安装。直接一句话命令行里下载并移动到oh my zsh目录中：
 
