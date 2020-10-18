@@ -97,7 +97,26 @@
         
         
         <div class="post-content">
-            <h2 id="wd插件">wd插件</h2>
+            <p>目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins。
+凡是这里有的，都可以立刻生效。</p>
+<h2 id="autojump">autojump</h2>
+<p>安装地址 <a href="https://blog.csdn.net/shenhonglei1234/article/details/106674554">https://blog.csdn.net/shenhonglei1234/article/details/106674554</a></p>
+<p><a href="https://blog.csdn.net/java_road_far/article/details/101324677">https://blog.csdn.net/java_road_far/article/details/101324677</a></p>
+<p>autojump和z插件关系</p>
+<p>autojump 需要单独安装，之后在 zshrc 文件启用，才能使用。</p>
+<p>Z 是 oh-my-zsh 内置的插件，不需要再安装其他的软件。直接在zshrc 文件启用即可。</p>
+<h2 id="zsh命令语法高亮插件-zsh-syntax-highlightinghttpsgithubcomzsh-userszsh-syntax-highlighting">Zsh命令语法高亮插件 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a></h2>
+<p>将插件下载到oh my zsh的插件目录下的该新建插件同名文件夹中</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+</code></pre></td></tr></table>
+</div>
+</div><p>编辑<code>~/.zshrc</code>文件将然后将插件引用命令写入该文件最后一行（必须）</p>
+<h2 id="wd插件">wd插件</h2>
 <p>wd 插件是我比较喜欢的一个，它的作用就是能够快速的切换到常用的目录。我们用命令行时经常会遇到这样一种情况，我们常用的目录就那么几个，而这些目录有时候会再很深的层级中。使用 cd 命令在这些深层级目录中切换就比较耗费时间了。</p>
 <p>wd 插件正是为了解决这个问题，比如我们有一个常用的目录 /usr/nginx/www/html，我们首先进入到这个目录中，然后输入</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -155,14 +174,17 @@ bing 你好
 <p>last-working-dir 插件，可以记录上一次退出命令行时候的所在路径，并且在下一次启动命令行的时候自动恢复到上一次所在的路径。这一切不需要我们进行任何操作，全部都是自动完成的。只需要在 .zshrc 文件中将插件开启即可。</p>
 <h2 id="catimg">catimg</h2>
 <p>catimg 这个命令将图片文件的内容输出到命令行, 比如：</p>
+<h2 id="zsh-syntax-highlighting">zsh-syntax-highlighting</h2>
+<p>语法高亮插件</p>
+<p>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting</p>
 <h2 id="zsh命令自动补全插件-zsh-autosuggestions">Zsh命令自动补全插件 zsh-autosuggestions</h2>
 <p>这里利用Oh my zsh的方法安装。直接一句话命令行里下载并移动到oh my zsh目录中：</p>
-<p><code>git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</code>
-然后在~/.zshrc文件中找到plugins数组，加入zsh-autosuggestions名字，重新打开终端即可。</p>
+<p>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions">https://github.com/zsh-users/zsh-autosuggestions</a> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions</p>
+<p>然后在~/.zshrc文件中找到plugins数组，加入zsh-autosuggestions名字，重新打开终端即可。</p>
 <h3 id="extract">extract</h3>
 <p>功能强大的解压插件，所有类型的文件解压一个命令<code>x</code>全搞定，再也不需要去记<code>tar</code>后面到底是哪几个参数了。</p>
 <h2 id="z">z</h2>
-<p>强大的目录自动跳转命令，会记忆你曾经进入过的目录，用模糊匹配快速进入你想要的目录。</p>
+<p>这个和autojump 功能基本一样,感觉按j比z舒服,强大的目录自动跳转命令，会记忆你曾经进入过的目录，用模糊匹配快速进入你想要的目录。</p>
 <h2 id="sublime">sublime</h2>
 <p>平时使用sublime比较多，该插件可以使用命令行打开sublime。
 常用命令如下：</p>
@@ -178,6 +200,133 @@ bing 你好
 st file_a   <span style="color:#75715e"># 用sublime打开文件 file</span>
 st dir_a    <span style="color:#75715e"># 用sublime打开目录 dir</span>
 stt         <span style="color:#75715e"># 在sublime打开当前目录，相当于 st .</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="我的配置">我的配置</h2>
+<p>vim ~/.zshrc</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">ZSH_THEME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;crunch&#34;</span> <span style="color:#75715e"># cloud bira </span>
+
+plugins<span style="color:#f92672">=(</span>
+    git
+    navi 
+    wd
+    incr
+    autojump
+    web-search
+    last-working-dir
+    zsh-syntax-highlighting
+    sublime
+    extract
+    z
+    docker
+    docker-compose
+    zsh-autosuggestions
+<span style="color:#f92672">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="其他插件文章">其他插件文章</h2>
+<p><a href="https://hufangyun.com/2017/zsh-plugin/">https://hufangyun.com/2017/zsh-plugin/</a></p>
+<h3 id="powerlevel10k-插件安装">powerlevel10k 插件安装</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+</code></pre></td></tr></table>
+</div>
+</div><p>Users in mainland China can use the official mirror on gitee.com for faster download.
+中国大陆用户可以使用 gitee.com 上的官方镜像加速下载.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+</code></pre></td></tr></table>
+</div>
+</div><p>Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
+<h2 id="centos7-下安装">centos7 下安装</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">plugins<span style="color:#f92672">=(</span>
+        git
+        autojump
+        last-working-dir
+        extract
+        docker
+        docker-compose
+        zsh-autosuggestions
+        zsh-navigation-tools
+        wd
+<span style="color:#f92672">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="centos7下-zsh-autosuggestions-要安装">centos7下 zsh-autosuggestions 要安装</h3>
+<p>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions">https://github.com/zsh-users/zsh-autosuggestions</a> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions</p>
+<h3 id="autojump也要自己安装">autojump也要自己安装</h3>
+<p>wget <a href="https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz">https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz</a></p>
+<p>解压</p>
+<p>python install.py</p>
+<p>安装提示复制 东西到zshrc文件最后</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Please add the line to ~/.zshrc :
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh
+
+You need to run &#39;source ~/.zshrc&#39; before you can start using autojump. To remove autojump, run &#39;./uninstall.sh&#39;
+</code></pre></td></tr></table>
+</div>
+</div><p>生效</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.zshrc
 </code></pre></td></tr></table>
 </div>
 </div>

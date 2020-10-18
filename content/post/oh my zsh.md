@@ -53,11 +53,11 @@ https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 
 curl 方式安装
 
-**sh -c“ $（curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh）”**
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 wget 方式安装
 
-**sh -c“ $（wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O-）”**
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 
 
@@ -101,7 +101,7 @@ echo $SHELL
 
 
 
-另外一个主题就是 c,bira，也是我目前在用的一个主题
+另外一个主题就是  bira ，也是我目前在用的一个主题
 
 设置方法：vim ~/.zshrc， 找到**ZSH_THEME=“”，**这句话，在双引号里面写上cloud就可以啦！
 

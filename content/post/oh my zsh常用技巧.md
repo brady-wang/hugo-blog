@@ -9,15 +9,34 @@ categories: ["shell"]
 
 ---
 
+目前已经有的自带插件在官网Github中可以看到，https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins。
+ 凡是这里有的，都可以立刻生效。
+
 ## autojump
 
 安装地址 https://blog.csdn.net/shenhonglei1234/article/details/106674554
+
+https://blog.csdn.net/java_road_far/article/details/101324677
 
 autojump和z插件关系 
 
 autojump 需要单独安装，之后在 zshrc 文件启用，才能使用。
 
 Z 是 oh-my-zsh 内置的插件，不需要再安装其他的软件。直接在zshrc 文件启用即可。
+
+
+
+## Zsh命令语法高亮插件 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+将插件下载到oh my zsh的插件目录下的该新建插件同名文件夹中
+
+
+
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
+编辑`~/.zshrc`文件将然后将插件引用命令写入该文件最后一行（必须）
 
 
 
@@ -86,13 +105,20 @@ last-working-dir 插件，可以记录上一次退出命令行时候的所在路
 
 catimg 这个命令将图片文件的内容输出到命令行, 比如：
 
+## zsh-syntax-highlighting 
+
+语法高亮插件
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+
 
 
 ## Zsh命令自动补全插件 zsh-autosuggestions
 
 这里利用Oh my zsh的方法安装。直接一句话命令行里下载并移动到oh my zsh目录中：
 
-`git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+
 然后在~/.zshrc文件中找到plugins数组，加入zsh-autosuggestions名字，重新打开终端即可。
 
 
@@ -103,7 +129,7 @@ catimg 这个命令将图片文件的内容输出到命令行, 比如：
 
 ## z
 
-强大的目录自动跳转命令，会记忆你曾经进入过的目录，用模糊匹配快速进入你想要的目录。
+这个和autojump 功能基本一样,感觉按j比z舒服,强大的目录自动跳转命令，会记忆你曾经进入过的目录，用模糊匹配快速进入你想要的目录。
 
 ## sublime
 
@@ -128,7 +154,7 @@ ZSH_THEME="crunch" # cloud bira
 
 plugins=(
     git
-    navi
+    navi 
     wd
     incr
     autojump
@@ -149,3 +175,69 @@ plugins=(
 ## 其他插件文章
 
 https://hufangyun.com/2017/zsh-plugin/
+
+
+
+### powerlevel10k 插件安装
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Users in mainland China can use the official mirror on gitee.com for faster download.
+中国大陆用户可以使用 gitee.com 上的官方镜像加速下载.
+
+```
+git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
+
+
+
+## centos7 下安装
+
+```shell
+plugins=(
+        git
+        autojump
+        last-working-dir
+        extract
+        docker
+        docker-compose
+        zsh-autosuggestions
+        zsh-navigation-tools
+        wd
+)
+```
+
+### centos7下 zsh-autosuggestions 要安装
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+
+### autojump也要自己安装
+
+wget https://github.com/downloads/joelthelion/autojump/autojump_v21.1.2.tar.gz 
+
+解压
+
+python install.py
+
+安装提示复制 东西到zshrc文件最后
+
+```
+Please add the line to ~/.zshrc :
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+You need to run 'source ~/.zshrc' before you can start using autojump. To remove autojump, run './uninstall.sh'
+```
+
+生效 
+
+```shell
+source ~/.zshrc
+```
+
+
+
