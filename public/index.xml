@@ -6,7 +6,16 @@
     <description>Recent content on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Oct 2020 22:11:05 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 22:39:27 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo不蒜子统计数量</title>
+      <link>http://yeves.cn/post/busuanzi%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Sun, 18 Oct 2020 22:39:27 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/busuanzi%E7%BB%9F%E8%AE%A1/</guid>
+      <description>官方文档地址 http://busuanzi.ibruce.info/ http://ibruce.info/2015/04/04/busuanzi/</description>
+    </item>
+    
     <item>
       <title>hugo网站配置聊天</title>
       <link>http://yeves.cn/post/hugo%E9%85%8D%E7%BD%AEdao%E8%81%8A%E5%A4%A9/</link>
