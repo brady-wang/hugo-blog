@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>vim新手节约时间十个技巧 | 风行天下的博客</title>
+    <meta property="og:title" content="vim新手节约时间十个技巧 - 风行天下的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-10-18T09:32:01&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-10-18T09:32:01&#43;08:00'>
+        
+    <meta name="Keywords" content="风行天下">
+    <meta name="description" content="vim新手节约时间十个技巧">
+        
+    <meta name="author" content="风行天下">
+    <meta property="og:url" content="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://yeves.cn/">
+                        风行天下的博客
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://yeves.cn/">首页</a>
+                    
+                    <a  href="http://yeves.cn/tools/" title="工具">工具</a>
+                    
+                    <a  href="http://yeves.cn/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://yeves.cn/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#配置-vimrc">配置 vimrc</a></li>
+    <li><a href="#不关闭终端退出编辑器">不关闭终端退出编辑器</a></li>
+    <li><a href="#粘贴进vim-不让格式错乱">粘贴进vim 不让格式错乱</a></li>
+    <li><a href="#删除一行或多行">删除一行或多行</a></li>
+    <li><a href="#复制粘贴一块代码">复制粘贴一块代码</a></li>
+    <li><a href="#撤销与重做">撤销与重做</a></li>
+    <li><a href="#代码注释">代码注释</a></li>
+    <li><a href="#搜索">搜索</a></li>
+    <li><a href="#把外部文件读入-vim">把外部文件读入 Vim</a></li>
+    <li><a href="#把命令的结果读入-vim">把命令的结果读入 Vim</a></li>
+    <li><a href="#切换到上次修改的位置">切换到上次修改的位置</a></li>
+    <li><a href="#移动到文件顶部或底部">移动到文件顶部或底部</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">vim新手节约时间十个技巧</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月18日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/vim'>vim</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <p><strong>Vim 是很多开发者的首选编辑器，通过设置正确的命令和快捷方式，它可以帮你更快的完成工作。这篇文章我们为 Vim 新手提供一些快捷键等方面的小技巧，帮你提升工作效率。</strong></p>
+<h2 id="配置-vimrc">配置 vimrc</h2>
+<p>当我最初使用 vim 的时候，我浪费了好多时间来缩进代码，我不知道通过修改 Vim 的 .vimrc 配置文件来实现代码缩进、语法高亮、显示行号等功能。</p>
+<p>在你的 Home 目录下创建一个 .vimrc 文件，添加下面的代码来设置行号、代码缩进等。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	set number       <span style="color:#75715e"># 显示行号 </span>
+	set autoindent     <span style="color:#75715e"># 自动缩进 </span>
+	set nowrap       <span style="color:#75715e"># 不换行</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在.vimrc中添加以下代码后，重启vim即可实现按TAB产生4个空格：</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">set expandtab
+</code></pre></td></tr></table>
+</div>
+</div><p>对于已保存的文件，可以使用下面的方法进行空格和TAB的替换：
+<strong>TAB替换为空格：</strong></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">:set expandtab
+:%retab!
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>空格替换为TAB：</strong></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">:set ts<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>
+:set noexpandtab
+:%retab!
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>加!是用于处理非空白字符之后的TAB，即所有的TAB，若不加!，则只处理行首的TAB。</strong></p>
+<h2 id="不关闭终端退出编辑器">不关闭终端退出编辑器</h2>
+<p>使用 Vim 编辑器保存并退出编辑状态是一件轻而易举的事，你只需记住按 ESC 键切换到正常模式，然后输入冒号(:)，之后输入 wq 即可实现保存并退出。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">	: wq
+</code></pre></td></tr></table>
+</div>
+</div><p>如果不想保存，则按 ESC 键切换到正常模式，然后输入冒号(:)，之后输入 q! 即可。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">: q!
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="粘贴进vim-不让格式错乱">粘贴进vim 不让格式错乱</h2>
+<p>经常需要粘贴一段代码到vim ,但是进去后换行完全乱了
+非插入模式下 输入下面,后面粘贴的就不会错乱了</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">:paste
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="删除一行或多行">删除一行或多行</h2>
+<p>通过退格键(Backspace)来删除一行代码显然是太麻烦了。可以通过切换到正常模式(编辑模式下按 ESC 键)来进行操作：</p>
+<p>dd ： (输入两次 d，下同)删除当前行；5dd ：删除当前行开始的5行；</p>
+<p>dG ：(先输入d，然后按 shift 键输入 g)删除当前行至最后一行的所以行。</p>
+<h2 id="复制粘贴一块代码">复制粘贴一块代码</h2>
+<p>你可能经常需要复制一行或一大块代码，使用 Vim 快捷键来实现此功能是非常简单的：</p>
+<p>按 Esc 切换到正常模式；
+把光标移到你需要复制的代码行首；
+按 V 选择整行，可移动光标选择多行；
+按 d 剪切或按 y 复制选择的代码；
+移动光标到你需要粘贴的位置，按 p 粘贴代码到光标后的位置，或按 P 粘贴到光标前。</p>
+<h2 id="撤销与重做">撤销与重做</h2>
+<p>在使用 Vim 或其他编辑器的时候，你可能经常需要对某些修改进行撤销或重做。在 Vim 中，你可以切换到正常模式，按 u 来撤销操作，按 Ctrl+r 来重做。</p>
+<h2 id="代码注释">代码注释</h2>
+<p><strong>代码注释：</strong></p>
+<ul>
+<li>
+<p>按 Ctrl+v 切换到可视化模式；</p>
+</li>
+<li>
+<p>移动光标(j 或 k)选中需要注释的行的开头；</p>
+</li>
+<li>
+<p>按大写 I，然后输入注释符，如 #； 最后按 Esc。</p>
+</li>
+</ul>
+<p><strong>取消注释：</strong></p>
+<ul>
+<li>
+<p>按 Ctrl+v 切换到可视化模式；</p>
+</li>
+<li>
+<p>按 j 或 k 选择要删除的注释符；</p>
+</li>
+<li>
+<p>按 d 或 x 删除注释符</p>
+</li>
+</ul>
+<p>如果使用 // 符号注释，则取消注释时需进行两遍操作。</p>
+<h2 id="搜索">搜索</h2>
+<p>搜索在很多时候都是一个非常重要的功能。在文件中搜索一个特定的词，可以切换到正常模式，然后输入斜线( / )，之后跟上要搜索的词，回车即可。</p>
+<p><code>/word-to-be-searched</code></p>
+<p>按 n 显示下一个搜索结果，按 N 显示上一个搜索结果。</p>
+<p>从最后开始搜索 按下 Shift+g</p>
+<p>?word-to-be-search</p>
+<h2 id="把外部文件读入-vim">把外部文件读入 Vim</h2>
+<p>我开始使用 Vim 的时候，经常会打开一个文件、复制内容、关闭文件、打开另一个文件、然后粘贴进去复制到内容。其实 Vim 中读取另一个文件的内容非常方便。切换到正常模式，然后按 :read。使用此快捷键你不需要手动打开文件来复制内容。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">:read readme.md
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="把命令的结果读入-vim">把命令的结果读入 Vim</h2>
+<p>有时候你需要把某个命令的结果复制到 Vim 中，这在 Vim 也非常简单。切换到正常模式，然后输入 :read !command 即可把 command 的结果输入到 vim 中。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">:read !ls -l
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="切换到上次修改的位置">切换到上次修改的位置</h2>
+<p>想知道你在文件中做的最后一次修改是在什么位置？切换到正常模式，输入 g; 来即可切换到上次修改的位置。</p>
+<h2 id="移动到文件顶部或底部">移动到文件顶部或底部</h2>
+<p>当需要移动到文件顶部或底部时，通过 j 或 k 来一行行的移动显得有点麻烦。Vim 提供了一个快捷键可直接实现此功能。切换到正常模式，输入 gg 返回文件顶部，输入 G 返回文件底部。</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://yeves.cn/">风行天下</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/">http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%90%E5%8F%96%E7%A0%81/">百度网盘自定义提取码</a></li>
+        
+        <li><a href="/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/">ssh设置远程拉取代码</a></li>
+        
+        <li><a href="/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/">ssh免密登录</a></li>
+        
+        <li><a href="/tools/">工具</a></li>
+        
+        <li><a href="/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/">搜狗快捷输入当前时间</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/vim'>vim</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://yeves.cn/">风行天下的博客 By 风行天下</a>
+        
+        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备18010513号</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://yeves.cn/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://yeves.cn/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" title="ssh防御暴力破解">ssh防御暴力破解</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/" title="ssh修改默认端口">ssh修改默认端口</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Vim中复制粘贴缩进错乱问题">Vim中复制粘贴缩进错乱问题</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/" title="vim新手节约时间十个技巧">vim新手节约时间十个技巧</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%90%E5%8F%96%E7%A0%81/" title="百度网盘自定义提取码">百度网盘自定义提取码</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/" title="ssh设置远程拉取代码">ssh设置远程拉取代码</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" title="ssh免密登录">ssh免密登录</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%BE%93%E5%85%A5%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/" title="搜狗快捷输入当前时间">搜狗快捷输入当前时间</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%9C%B0%E5%9D%80/" title="hugo官方相关文档地址">hugo官方相关文档地址</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3Maupassant%E6%96%87%E6%A1%A3/" title="hugo主题文档manpassant">hugo主题文档manpassant</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://yeves.cn/categories/Go/">Go (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Hugo/">Hugo (4)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Linux/">Linux (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Nginx/">Nginx (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/docker/">docker (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/git/">git (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/ssh/">ssh (4)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/vim/">vim (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E5%B7%A5%E5%85%B7/">工具 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://yeves.cn/tags/Go/">Go</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/docker/">docker</a>
+    
+    <a href="http://yeves.cn/tags/git/">git</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/linux/">linux</a>
+    
+    <a href="http://yeves.cn/tags/nginx/">nginx</a>
+    
+    <a href="http://yeves.cn/tags/sougou/">sougou</a>
+    
+    <a href="http://yeves.cn/tags/ssh/">ssh</a>
+    
+    <a href="http://yeves.cn/tags/vim/">vim</a>
+    
+    <a href="http://yeves.cn/tags/%E4%B8%BB%E9%A2%98/">主题</a>
+    
+    <a href="http://yeves.cn/tags/%E6%8F%90%E5%8F%96%E7%A0%81/">提取码</a>
+    
+    <a href="http://yeves.cn/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/">百度网盘</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.cnblogs.com/brady-wang/" title="博客园">博客园</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://yeves.cn/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
