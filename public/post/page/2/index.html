@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
 
     <title>Posts | 风行天下的博客</title>
     <meta property="og:title" content="Posts - 风行天下的博客">
@@ -73,6 +71,31 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" title="ssh免密登录">ssh免密登录</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月17日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/ssh'>ssh</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            原因 每次登录都要ssh -p wang@xx.xx.xx.xx 虽然做了公钥验证 https://www.cnblogs.com/php-linux/p/10795913.html 不需要输入密码，但是每次还是要输入域名，有点麻烦 设置方式 进入到.ssh目录 也是就是 id_rsa.pub目录 vim config 1 2 3 4 5 Host wang 这个是个标识 不是远程用户 HostName ip地址 Port 22 User wang IdentityFile ~/.ssh/id_rsa ssh wang 即可登录 如果还想要快速用root登录 1 2 3 4 5 6 7 8 9 10 11 Host wang……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/">阅读全文</a></p>
+    </article>
+    
     
     
     <article class="post">
@@ -607,31 +630,6 @@ type: archives
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/" title="docker阿里云加速">docker阿里云加速</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月15日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/docker'>docker</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            阿里云提供的个人加速 在linux下执行以下命令即可 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://a4fyjv0u.mirror.aliyuncs.com&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker……
-        </div>
-        <p class="readmore"><a href="http://yeves.cn/post/docker%E9%98%BF%E9%87%8C%E4%BA%91%E5%8A%A0%E9%80%9F/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -696,9 +694,6 @@ type: archives
 
 
 
-    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
-
-
 <script>
     daovoice('init', {
         app_id: "6ca784d1"
@@ -723,6 +718,10 @@ type: archives
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo%E9%85%8D%E7%BD%AEdao%E8%81%8A%E5%A4%A9/" title="hugo网站配置聊天">hugo网站配置聊天</a>
+    </li>
     
     <li>
         <a href="http://yeves.cn/post/oh-my-zsh/" title="oh my zsh 安装">oh my zsh 安装</a>
@@ -760,10 +759,6 @@ type: archives
         <a href="http://yeves.cn/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/" title="ssh设置远程拉取代码">ssh设置远程拉取代码</a>
     </li>
     
-    <li>
-        <a href="http://yeves.cn/post/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" title="ssh免密登录">ssh免密登录</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -780,6 +775,8 @@ type: archives
     <li><a href="http://yeves.cn/categories/Linux/">Linux (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/Nginx/">Nginx (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/dao/">dao (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/docker/">docker (2)</a></li>
     
@@ -805,6 +802,8 @@ type: archives
     <a href="http://yeves.cn/tags/Go/">Go</a>
     
     <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/dao/">dao</a>
     
     <a href="http://yeves.cn/tags/docker/">docker</a>
     
