@@ -9,6 +9,16 @@ categories: ["shell"]
 
 ---
 
+## autojump
+
+安装地址 https://blog.csdn.net/shenhonglei1234/article/details/106674554
+
+autojump和z插件关系 
+
+autojump 需要单独安装，之后在 zshrc 文件启用，才能使用。
+
+Z 是 oh-my-zsh 内置的插件，不需要再安装其他的软件。直接在zshrc 文件启用即可。
+
 
 
 ## wd插件
@@ -107,3 +117,35 @@ st dir_a    # 用sublime打开目录 dir
 stt         # 在sublime打开当前目录，相当于 st .
 ```
 
+
+
+## 我的配置
+
+vim ~/.zshrc
+
+```zsh
+ZSH_THEME="crunch" # cloud bira 
+
+plugins=(
+    git
+    navi
+    wd
+    incr
+    autojump
+    web-search
+    last-working-dir
+    zsh-syntax-highlighting
+    sublime
+    extract
+    z
+    docker
+    docker-compose
+    zsh-autosuggestions
+)
+```
+
+
+
+## 其他插件文章
+
+https://hufangyun.com/2017/zsh-plugin/
