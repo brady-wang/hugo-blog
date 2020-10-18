@@ -4,12 +4,47 @@
   
   <url>
     <loc>http://yeves.cn/categories/</loc>
-    <lastmod>2020-10-18T10:05:06+08:00</lastmod>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/oh-my-zsh/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/oh-my-zsh/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yeves.cn/post/</loc>
-    <lastmod>2020-10-18T10:05:06+08:00</lastmod>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/categories/shell/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/zsh/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/</loc>
+    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
   </url>
   
   <url>
@@ -28,13 +63,18 @@
   </url>
   
   <url>
-    <loc>http://yeves.cn/tags/</loc>
-    <lastmod>2020-10-18T10:05:06+08:00</lastmod>
+    <loc>http://yeves.cn/tags/sublime/</loc>
+    <lastmod>2020-10-18T10:03:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://yeves.cn/</loc>
-    <lastmod>2020-10-18T10:05:06+08:00</lastmod>
+    <loc>http://yeves.cn/categories/sublime/</loc>
+    <lastmod>2020-10-18T10:03:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/sublime-mac%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2020-10-18T10:03:01+08:00</lastmod>
   </url>
   
   <url>

@@ -6,7 +6,25 @@
     <description>Recent content on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Oct 2020 10:05:06 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 12:36:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>oh my zsh 安装</title>
+      <link>http://yeves.cn/post/oh-my-zsh/</link>
+      <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/oh-my-zsh/</guid>
+      <description>官网地址 oh my zsh: https://ohmyz.sh/ oh my zsh github 地址: https://github.com/ohmyzsh/ohmyzsh/wiki zsh github地址: https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH oh my zsh 主题: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes oh my zsh 插件: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins 安装zsh mac系统 1 2 zsh --version brew install zsh zsh-completions centos 1 sudo yum update &amp;amp;&amp;amp; sudo yum -y install zsh ubuntu 1 apt install zsh https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH 安装 oh my zsh curl 方式安装 sh -c“ $（curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/mast</description>
+    </item>
+    
+    <item>
+      <title>oh my zsh 常用插件</title>
+      <link>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>wd插件 wd 插件是我比较喜欢的一个，它的作用就是能够快速的切换到常用的目录。我们用命令行时经常会遇到这样一种情况，我们常用的目录就那么几个，而这些目录有时候会再很深的层级中。使用 cd 命令在这些深层级目录中切换就比较耗费时间了。 wd 插件正是为了解决这个问题，比如我们有一个常用的目录 /us</description>
+    </item>
+    
     <item>
       <title>ssh防御暴力破解</title>
       <link>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</link>
@@ -14,6 +32,15 @@
       
       <guid>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</guid>
       <description>托管在阿里云的机器我们通常都用SSH方式来远程管理.但是经常可以发现log-watch的日志中有大量试探登录的 信息,为了我们的主机安全,有必要想个方法来阻挡这些可恨的&amp;quot;HACKER&amp;quot; 有很多办法来阻挡这些密码尝试 修改端口 健壮的密码 RSA公钥认证 vi /etc/ssh/sshd_config #Port 22 默认端口为</description>
+    </item>
+    
+    <item>
+      <title>sublime破解 mac版本下载</title>
+      <link>http://yeves.cn/post/sublime-mac%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Sun, 18 Oct 2020 10:03:01 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/sublime-mac%E4%B8%8B%E8%BD%BD/</guid>
+      <description>链接: https://pan.baidu.com/s/1j94Xnjq_M0oGiLn6aXMb7Q 提取码: wang 破解步骤: ps:不要更新 打开dmg映像将“Sublime Text 3 ”拖到应用程序中。 运行dmg软件，会弹出一个注册框。 打开“SN.rtf”文档，将注册码复制到注册框中，OK。</description>
     </item>
     
     <item>

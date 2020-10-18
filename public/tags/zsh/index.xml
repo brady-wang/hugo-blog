@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zsh on 风行天下的博客</title>
+    <link>http://yeves.cn/tags/zsh/</link>
+    <description>Recent content in zsh on 风行天下的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 18 Oct 2020 12:36:00 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>oh my zsh 安装</title>
+      <link>http://yeves.cn/post/oh-my-zsh/</link>
+      <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/oh-my-zsh/</guid>
+      <description>官网地址 oh my zsh: https://ohmyz.sh/ oh my zsh github 地址: https://github.com/ohmyzsh/ohmyzsh/wiki zsh github地址: https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH oh my zsh 主题: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes oh my zsh 插件: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins 安装zsh mac系统 1 2 zsh --version brew install zsh zsh-completions centos 1 sudo yum update &amp;amp;&amp;amp; sudo yum -y install zsh ubuntu 1 apt install zsh https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH 安装 oh my zsh curl 方式安装 sh -c“ $（curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/mast</description>
+    </item>
+    
+    <item>
+      <title>oh my zsh 常用插件</title>
+      <link>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>wd插件 wd 插件是我比较喜欢的一个，它的作用就是能够快速的切换到常用的目录。我们用命令行时经常会遇到这样一种情况，我们常用的目录就那么几个，而这些目录有时候会再很深的层级中。使用 cd 命令在这些深层级目录中切换就比较耗费时间了。 wd 插件正是为了解决这个问题，比如我们有一个常用的目录 /us</description>
+    </item>
+    
+  </channel>
+</rss>
