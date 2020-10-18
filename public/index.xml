@@ -6,7 +6,43 @@
     <description>Recent content on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2020 14:20:47 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 10:05:06 +0800</lastBuildDate><atom:link href="http://yeves.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh防御暴力破解</title>
+      <link>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</link>
+      <pubDate>Sun, 18 Oct 2020 10:05:06 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</guid>
+      <description>托管在阿里云的机器我们通常都用SSH方式来远程管理.但是经常可以发现log-watch的日志中有大量试探登录的 信息,为了我们的主机安全,有必要想个方法来阻挡这些可恨的&amp;quot;HACKER&amp;quot; 有很多办法来阻挡这些密码尝试 修改端口 健壮的密码 RSA公钥认证 vi /etc/ssh/sshd_config #Port 22 默认端口为</description>
+    </item>
+    
+    <item>
+      <title>ssh修改默认端口</title>
+      <link>http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Sun, 18 Oct 2020 10:02:01 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/</guid>
+      <description>修改ssh端口 vi /etc/ssh/sshd_config #Port 22 默认端口为22,为了避免被扫描,去掉#,改成一个其他的端口,比如45632 保存后重启sshd服务 service sshd restart</description>
+    </item>
+    
+    <item>
+      <title>Vim中复制粘贴缩进错乱问题</title>
+      <link>http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Sun, 18 Oct 2020 09:54:16 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>这是一则记录贴，防止小技巧遗忘。 不知道大家是否会有这种困扰，例如在Android Studio有一段缩进优美的代码实现，例如： 1 2 3 4 public void sayHello() { String msg = &amp;#34;Hello Vim Paste Mode&amp;#34;; System.out.println(msg); } 当你把这段缩进优美的代码直接ctrl+c，ctrl+v到Vim的时候，就会出现代码丢失和缩进错乱等情况。 解决方案 vim进入</description>
+    </item>
+    
+    <item>
+      <title>vim新手节约时间十个技巧</title>
+      <link>http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Sun, 18 Oct 2020 09:32:01 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/</guid>
+      <description>Vim 是很多开发者的首选编辑器，通过设置正确的命令和快捷方式，它可以帮你更快的完成工作。这篇文章我们为 Vim 新手提供一些快捷键等方面的小技巧，帮你提升工作效率。 配置 vimrc 当我最初使用 vim 的时候，我浪费了好多时间来缩进代码，我不知道通过修改 Vim 的 .vimrc 配置文件来实现代码缩进、语法高亮、显示行号等功能。</description>
+    </item>
+    
     <item>
       <title>百度网盘自定义提取码</title>
       <link>http://yeves.cn/post/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%90%E5%8F%96%E7%A0%81/</link>

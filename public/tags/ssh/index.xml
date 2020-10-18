@@ -6,7 +6,25 @@
     <description>Recent content in ssh on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2020 13:54:44 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 10:05:06 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh防御暴力破解</title>
+      <link>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</link>
+      <pubDate>Sun, 18 Oct 2020 10:05:06 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/</guid>
+      <description>托管在阿里云的机器我们通常都用SSH方式来远程管理.但是经常可以发现log-watch的日志中有大量试探登录的 信息,为了我们的主机安全,有必要想个方法来阻挡这些可恨的&amp;quot;HACKER&amp;quot; 有很多办法来阻挡这些密码尝试 修改端口 健壮的密码 RSA公钥认证 vi /etc/ssh/sshd_config #Port 22 默认端口为</description>
+    </item>
+    
+    <item>
+      <title>ssh修改默认端口</title>
+      <link>http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Sun, 18 Oct 2020 10:02:01 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/</guid>
+      <description>修改ssh端口 vi /etc/ssh/sshd_config #Port 22 默认端口为22,为了避免被扫描,去掉#,改成一个其他的端口,比如45632 保存后重启sshd服务 service sshd restart</description>
+    </item>
+    
     <item>
       <title>ssh设置远程拉取代码</title>
       <link>http://yeves.cn/post/ssh%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
