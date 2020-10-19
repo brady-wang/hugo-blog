@@ -6,7 +6,25 @@
     <description>Recent content in Tags on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Oct 2020 22:39:27 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 14:30:15 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubectl</title>
+      <link>http://yeves.cn/tags/kubectl/</link>
+      <pubDate>Mon, 19 Oct 2020 14:30:15 +0800</pubDate>
+      
+      <guid>http://yeves.cn/tags/kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>http://yeves.cn/tags/zsh/</link>
+      <pubDate>Mon, 19 Oct 2020 14:30:15 +0800</pubDate>
+      
+      <guid>http://yeves.cn/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>不蒜子</title>
       <link>http://yeves.cn/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/</link>
@@ -31,15 +49,6 @@
       <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
       
       <guid>http://yeves.cn/tags/oh-my-zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zsh</title>
-      <link>http://yeves.cn/tags/zsh/</link>
-      <pubDate>Sun, 18 Oct 2020 12:36:00 +0800</pubDate>
-      
-      <guid>http://yeves.cn/tags/zsh/</guid>
       <description></description>
     </item>
     
