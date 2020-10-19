@@ -197,7 +197,7 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$H
 
 Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
 
-
+​	 修改样式: p10k configure
 
 ## centos7 下安装
 
@@ -243,5 +243,29 @@ You need to run 'source ~/.zshrc' before you can start using autojump. To remove
 source ~/.zshrc
 ```
 
+## centos8 bash- chsh command not found
 
+安装oh-my-zsh 修改bash发现
+
+usr/bin下没有chsh
+
+dnf新的包管理工具,类似yum
+
+sudo dnf update 
+
+```bash
+$ sudo dnf -q provides '*/chsh'
+
+
+
+util-linux-user-2.32.1-17.el8.x86_64 : libuser based util-linux utilities
+```
+
+可知chsh在package util-linux-user中
+
+dnf install:
+
+```bash
+sudo dnf install util-linux-user
+```
 

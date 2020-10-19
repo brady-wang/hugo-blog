@@ -35,9 +35,6 @@
     
     
     
-
-    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/6ca784d1.js","daovoice")</script>
-
 </head>
 
 
@@ -273,6 +270,7 @@ plugins<span style="color:#f92672">=(</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
+<p>​	 修改样式: p10k configure</p>
 <h2 id="centos7-下安装">centos7 下安装</h2>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -334,6 +332,37 @@ You need to run &#39;source ~/.zshrc&#39; before you can start using autojump. T
 <pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.zshrc
 </code></pre></td></tr></table>
 </div>
+</div><h2 id="centos8-bash--chsh-command-not-found">centos8 bash- chsh command not found</h2>
+<p>安装oh-my-zsh 修改bash发现</p>
+<p>usr/bin下没有chsh</p>
+<p>dnf新的包管理工具,类似yum</p>
+<p>sudo dnf update</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo dnf -q provides <span style="color:#e6db74">&#39;*/chsh&#39;</span>
+
+
+
+util-linux-user-2.32.1-17.el8.x86_64 : libuser based util-linux utilities
+</code></pre></td></tr></table>
+</div>
+</div><p>可知chsh在package util-linux-user中</p>
+<p>dnf install:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install util-linux-user
+</code></pre></td></tr></table>
+</div>
 </div>
         </div>
 
@@ -392,28 +421,17 @@ You need to run &#39;source ~/.zshrc&#39; before you can start using autojump. T
     <div>
         &copy; 2020 <a href="http://yeves.cn/">风行天下的博客 By 风行天下</a>
         
-        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备18010513号</a>
+
+
         
+        <div style="padding-top:10px;">
+            <a href="https://github.com/gohugoio/hugo" target="_black" rel="nofollow"><span >Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span >Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+            |<a rel="nofollow" target="_blank" href="http://www.chaicp.com/">粤ICP备18010513号</a>
+        </div>
+
     </div>
     <br />
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <i class="fa fa-user"></i>  <span id="busuanzi_value_site_pv"></span>|
-        <i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span>人次
-    </div>
-
 </footer>
 
 
@@ -426,7 +444,7 @@ You need to run &#39;source ~/.zshrc&#39; before you can start using autojump. T
                 }
             };
     </script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
@@ -435,13 +453,6 @@ You need to run &#39;source ~/.zshrc&#39; before you can start using autojump. T
 
     <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
 
-
-<script>
-    daovoice('init', {
-        app_id: "6ca784d1"
-    });
-    daovoice('update');
-</script>
 
 
 
