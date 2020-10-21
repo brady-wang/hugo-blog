@@ -73,6 +73,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="kubenates 常用命令">kubenates 常用命令</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月21日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/k8s'>k8s</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            #查看所有namespace的pods运行情况 kubectl get pods &ndash;all-namespaces #查看具体pods，记得后边跟namespace名字哦 kubectl get pods kubernetes-dashboard-76479d66bb-nj8wr &ndash;namespace=kube-system 查看pods具体信息 kubectl get pods -o wide kubernetes-dashboard-76479d66bb-nj8wr &ndash;namespace=kube-system 查看集群健康状态 kubectl get cs 获取所有deployment kubectl get deployment &ndash;all-namespaces 列出该 namespace 中的所有 pod 包括未初始化的 kubectl get pods &ndash;include-uninitialized 查看deployment() kubectl……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/" title="kubenete zsh插件快捷键">kubenete zsh插件快捷键</a>
             </h1>
         </header>
@@ -277,29 +300,6 @@
         <p class="readmore"><a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/" title="vim新手节约时间十个技巧">vim新手节约时间十个技巧</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/vim'>vim</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Vim 是很多开发者的首选编辑器，通过设置正确的命令和快捷方式，它可以帮你更快的完成工作。这篇文章我们为 Vim 新手提供一些快捷键等方面的小技巧，帮你提升工作效率。 配置 vimrc 当我最初使用 vim 的时候，我浪费了好多时间来缩进代码，我不知道通过修改 Vim 的 .vimrc 配置文件来实现代码缩进、语法高亮、显示行号等功能。……
-        </div>
-        <p class="readmore"><a href="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -378,6 +378,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="kubenates 常用命令">kubenates 常用命令</a>
+    </li>
+    
+    <li>
         <a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/" title="kubenete zsh插件快捷键">kubenete zsh插件快捷键</a>
     </li>
     
@@ -413,10 +417,6 @@
         <a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Vim中复制粘贴缩进错乱问题">Vim中复制粘贴缩进错乱问题</a>
     </li>
     
-    <li>
-        <a href="http://yeves.cn/post/vim%E6%96%B0%E6%89%8B%E8%8A%82%E7%BA%A6%E6%97%B6%E9%97%B4/" title="vim新手节约时间十个技巧">vim新手节约时间十个技巧</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -439,6 +439,8 @@
     <li><a href="http://yeves.cn/categories/docker/">docker (2)</a></li>
     
     <li><a href="http://yeves.cn/categories/git/">git (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/k8s/">k8s (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/shell/">shell (2)</a></li>
     
@@ -472,6 +474,8 @@
     <a href="http://yeves.cn/tags/git/">git</a>
     
     <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/k8s/">k8s</a>
     
     <a href="http://yeves.cn/tags/kubectl/">kubectl</a>
     

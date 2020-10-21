@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Oct 2020 14:30:15 +0800</lastBuildDate><atom:link href="http://yeves.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2020 09:34:32 +0800</lastBuildDate><atom:link href="http://yeves.cn/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubenates 常用命令</title>
+      <link>http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Wed, 21 Oct 2020 09:34:32 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <description>#查看所有namespace的pods运行情况 kubectl get pods &amp;ndash;all-namespaces #查看具体pods，记得后边跟namespace名字哦 kubectl get pods kubernetes-dashboard-76479d66bb-nj8wr &amp;ndash;namespace=kube-system 查看pods具体信息 kubectl get pods -o wide kubernetes-dashboard-76479d66bb-nj8wr &amp;ndash;namespace=kube-system 查看集群健康状态 kubectl get cs 获取所有deployment kubectl get deployment &amp;ndash;all-namespaces 列出该 namespace 中的所有 pod 包括未初始化的 kubectl get pods &amp;ndash;include-uninitialized 查看deployment() kubectl</description>
+    </item>
+    
     <item>
       <title>kubenete zsh插件快捷键</title>
       <link>http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/</link>
