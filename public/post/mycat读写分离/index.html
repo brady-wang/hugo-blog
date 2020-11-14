@@ -202,6 +202,53 @@ lib:依赖的jar包</p>
 &lt;/mycat:schema&gt;
 </code></pre></td></tr></table>
 </div>
+</div><p>如果想所有表读写分离 不指定表 去掉table</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;?xml version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.0&#34;</span>?&gt;
+&lt;!DOCTYPE mycat:schema SYSTEM <span style="color:#e6db74">&#34;schema.dtd&#34;</span>&gt;
+&lt;mycat:schema
+    xmlns:mycat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://io.mycat/&#34;</span>&gt;
+    &lt;!--配置数据表--&gt;
+    &lt;schema name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;itcast&#34;</span> checkSQLschema<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> sqlMaxLimit<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> dataNode<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dn1&#34;</span>&gt;
+    &lt;/schema&gt;
+    &lt;!--配置分片关系--&gt;
+    &lt;dataNode name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dn1&#34;</span> dataHost<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cluster1&#34;</span> database<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;itcast&#34;</span> /&gt;
+    &lt;!--配置连接信息--&gt;
+    &lt;dataHost name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cluster1&#34;</span> maxCon<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1000&#34;</span> minCon<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;10&#34;</span> balance<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>
+                writeType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> dbType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mysql&#34;</span> dbDriver<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;native&#34;</span> switchType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+                slaveThreshold<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span>&gt;
+        &lt;heartbeat&gt;select user<span style="color:#f92672">()</span>&lt;/heartbeat&gt;
+        &lt;writeHost host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;W1&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.1.99:3306&#34;</span> user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>
+                     password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>&gt;
+            &lt;readHost host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;W1R1&#34;</span> url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;192.168.1.99:3307&#34;</span> user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span> password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span> /&gt;
+        &lt;/writeHost&gt;
+    &lt;/dataHost&gt;
+&lt;/mycat:schema&gt;
+</code></pre></td></tr></table>
+</div>
 </div><p>server.xml</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">

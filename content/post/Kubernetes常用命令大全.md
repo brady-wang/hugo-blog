@@ -10,12 +10,6 @@ categories: ["k8s"]
 
 ---
 
-
-
-
-
-
-
 #查看所有namespace的pods运行情况
 kubectl get pods --all-namespaces
 #查看具体pods，记得后边跟namespace名字哦

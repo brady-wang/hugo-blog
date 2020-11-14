@@ -73,8 +73,39 @@ categories=["mycat"]
    </mycat:schema>
    ```
 
-   server.xml
+   
 
+   如果想所有表读写分离 不指定表 去掉table 
+   
+   ```shell
+   <?xml version="1.0"?>
+   <!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+   <mycat:schema
+       xmlns:mycat="http://io.mycat/">
+       <!--配置数据表-->
+       <schema name="itcast" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn1">
+       </schema>
+       <!--配置分片关系-->
+       <dataNode name="dn1" dataHost="cluster1" database="itcast" />
+       <!--配置连接信息-->
+       <dataHost name="cluster1" maxCon="1000" minCon="10" balance="3"
+                   writeType="1" dbType="mysql" dbDriver="native" switchType="1"
+                   slaveThreshold="100">
+           <heartbeat>select user()</heartbeat>
+           <writeHost host="W1" url="192.168.1.99:3306" user="root"
+                        password="root">
+               <readHost host="W1R1" url="192.168.1.99:3307" user="root" password="root" />
+           </writeHost>
+       </dataHost>
+   </mycat:schema>
+   ```
+   
+   
+   
+   
+
+   server.xml
+   
    ```
    <?xml version="1.0"?>
    ● firewalld.service - firewalld - dynamic firewall daemon
@@ -103,7 +134,7 @@ categories=["mycat"]
        </user>
    </mycat:server>
    ```
-
+   
    
 
 
