@@ -53,6 +53,41 @@
   </url>
   
   <url>
+    <loc>http://yeves.cn/tags/k8s/</loc>
+    <lastmod>2020-10-21T09:34:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/categories/k8s/</loc>
+    <lastmod>2020-10-21T09:34:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2020-10-21T09:34:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/kubectl/</loc>
+    <lastmod>2020-10-19T14:30:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2020-10-19T14:30:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/tags/zsh/</loc>
+    <lastmod>2020-10-19T14:30:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yeves.cn/categories/zsh/</loc>
+    <lastmod>2020-10-19T14:30:15+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yeves.cn/post/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/</loc>
     <lastmod>2020-10-18T22:39:27+08:00</lastmod>
   </url>
@@ -99,11 +134,6 @@
   
   <url>
     <loc>http://yeves.cn/categories/shell/</loc>
-    <lastmod>2020-10-18T12:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yeves.cn/tags/zsh/</loc>
     <lastmod>2020-10-18T12:36:00+08:00</lastmod>
   </url>
   

@@ -122,6 +122,52 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="kubenates 常用命令">kubenates 常用命令</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月21日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/k8s'>k8s</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            #查看所有namespace的pods运行情况 kubectl get pods &ndash;all-namespaces #查看具体pods，记得后边跟namespace名字哦 kubectl get pods kubernetes-dashboard-76479d66bb-nj8wr &ndash;namespace=kube-system 查看pods具体信息 kubectl get pods -o wide kubernetes-dashboard-76479d66bb-nj8wr &ndash;namespace=kube-system 查看集群健康状态 kubectl get cs 获取所有deployment kubectl get deployment &ndash;all-namespaces 列出该 namespace 中的所有 pod 包括未初始化的 kubectl get pods &ndash;include-uninitialized 查看deployment() kubectl……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/" title="kubenete zsh插件快捷键">kubenete zsh插件快捷键</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年10月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/zsh'>zsh</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Aliases Alias Command Description k kubectl The kubectl command kca kubectl --all-namespaces The kubectl command targeting all namespaces kaf kubectl apply -f Apply a YML file keti kubectl exec -ti Drop into an interactive terminal on a container Manage configuration quickly to switch contexts between local, dev and staging kcuc kubectl config use-context Set the current-context in a kubeconfig file kcsc kubectl config set-context Set a context entry in kubeconfig kcdc kubectl config delete-context Delete the specified context from the kubeconfig kccc kubectl config current-context Display the current-context kcgc kubectl config get-contexts List of contexts available General aliases kdel kubectl delete Delete resources by filenames, stdin, resources and names, or by resources and label selector kdelf kubectl delete -f Delete a pod using the type and name specified in -f argument Pod management kgp kubectl get pods List all pods……
+        </div>
+        <p class="readmore"><a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="http://yeves.cn/post/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/" title="hugo不蒜子统计数量">hugo不蒜子统计数量</a>
             </h1>
         </header>
@@ -257,52 +303,6 @@
         <p class="readmore"><a href="http://yeves.cn/post/sublime-mac%E4%B8%8B%E8%BD%BD/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/" title="ssh修改默认端口">ssh修改默认端口</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/ssh'>ssh</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            修改ssh端口 vi /etc/ssh/sshd_config #Port 22 默认端口为22,为了避免被扫描,去掉#,改成一个其他的端口,比如45632 保存后重启sshd服务 service sshd restart……
-        </div>
-        <p class="readmore"><a href="http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Vim中复制粘贴缩进错乱问题">Vim中复制粘贴缩进错乱问题</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年10月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='/categories/vim'>vim</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            这是一则记录贴，防止小技巧遗忘。 不知道大家是否会有这种困扰，例如在Android Studio有一段缩进优美的代码实现，例如： 1 2 3 4 public void sayHello() { String msg = &#34;Hello Vim Paste Mode&#34;; System.out.println(msg); } 当你把这段缩进优美的代码直接ctrl+c，ctrl+v到Vim的时候，就会出现代码丢失和缩进错乱等情况。 解决方案 vim进入……
-        </div>
-        <p class="readmore"><a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -407,6 +407,14 @@
     </li>
     
     <li>
+        <a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="kubenates 常用命令">kubenates 常用命令</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/" title="kubenete zsh插件快捷键">kubenete zsh插件快捷键</a>
+    </li>
+    
+    <li>
         <a href="http://yeves.cn/post/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/" title="hugo不蒜子统计数量">hugo不蒜子统计数量</a>
     </li>
     
@@ -428,14 +436,6 @@
     
     <li>
         <a href="http://yeves.cn/post/sublime-mac%E4%B8%8B%E8%BD%BD/" title="sublime破解 mac版本下载">sublime破解 mac版本下载</a>
-    </li>
-    
-    <li>
-        <a href="http://yeves.cn/post/ssh%E4%BF%AE%E6%94%B9%E7%AB%AF%E5%8F%A3/" title="ssh修改默认端口">ssh修改默认端口</a>
-    </li>
-    
-    <li>
-        <a href="http://yeves.cn/post/Vim%E4%B8%AD%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%BC%A9%E8%BF%9B%E9%94%99%E4%B9%B1%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Vim中复制粘贴缩进错乱问题">Vim中复制粘贴缩进错乱问题</a>
     </li>
     
 </ul>
@@ -461,6 +461,8 @@
     
     <li><a href="http://yeves.cn/categories/git/">git (2)</a></li>
     
+    <li><a href="http://yeves.cn/categories/k8s/">k8s (1)</a></li>
+    
     <li><a href="http://yeves.cn/categories/mycat/">mycat (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/mysql/">mysql (1)</a></li>
@@ -472,6 +474,8 @@
     <li><a href="http://yeves.cn/categories/sublime/">sublime (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/vim/">vim (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/zsh/">zsh (1)</a></li>
     
     <li><a href="http://yeves.cn/categories/%E4%B8%8D%E8%92%9C%E5%AD%90/">不蒜子 (1)</a></li>
     
@@ -495,6 +499,10 @@
     <a href="http://yeves.cn/tags/git/">git</a>
     
     <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/k8s/">k8s</a>
+    
+    <a href="http://yeves.cn/tags/kubectl/">kubectl</a>
     
     <a href="http://yeves.cn/tags/linux/">linux</a>
     

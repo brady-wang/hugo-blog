@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zsh on 风行天下的博客</title>
+    <link>http://yeves.cn/categories/zsh/</link>
+    <description>Recent content in zsh on 风行天下的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 19 Oct 2020 14:30:15 +0800</lastBuildDate><atom:link href="http://yeves.cn/categories/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubenete zsh插件快捷键</title>
+      <link>http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Mon, 19 Oct 2020 14:30:15 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/</guid>
+      <description>Aliases Alias Command Description k kubectl The kubectl command kca kubectl --all-namespaces The kubectl command targeting all namespaces kaf kubectl apply -f Apply a YML file keti kubectl exec -ti Drop into an interactive terminal on a container Manage configuration quickly to switch contexts between local, dev and staging kcuc kubectl config use-context Set the current-context in a kubeconfig file kcsc kubectl config set-context Set a context entry in kubeconfig kcdc kubectl config delete-context Delete the specified context from the kubeconfig kccc kubectl config current-context Display the current-context kcgc kubectl config get-contexts List of contexts available General aliases kdel kubectl delete Delete resources by filenames, stdin, resources and names, or by resources and label selector kdelf kubectl delete -f Delete a pod using the type and name specified in -f argument Pod management kgp kubectl get pods List all pods</description>
+    </item>
+    
+  </channel>
+</rss>
