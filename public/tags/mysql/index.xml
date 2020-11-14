@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on 风行天下的博客</title>
+    <link>http://yeves.cn/tags/mysql/</link>
+    <description>Recent content in mysql on 风行天下的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 14 Nov 2020 23:17:34 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mysql客户端连接</title>
+      <link>http://yeves.cn/post/mysql%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sat, 14 Nov 2020 23:17:34 +0800</pubDate>
+      
+      <guid>http://yeves.cn/post/mysql%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85/</guid>
+      <description>客户端安装 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 安装mysql客户端 yum install mysql -y 连接目标主机mysql mysql -h192.168.43.119 -uroot -p1234 查看数据库 show databases; 使用test数据库 use test 查询dept表 select * fom dept ; 退出连接 exit; 远程连接 本人在远程机器101.200.152.192，利用docker创建两个数据库，端口号分别为3307,</description>
+    </item>
+    
+  </channel>
+</rss>
