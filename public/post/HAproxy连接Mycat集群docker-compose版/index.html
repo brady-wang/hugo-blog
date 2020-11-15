@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+
+    <title>HAproxy连接Mycat集群docker-compose版 | 风行天下的博客</title>
+    <meta property="og:title" content="HAproxy连接Mycat集群docker-compose版 - 风行天下的博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-11-15T10:31:08&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-11-15T10:31:08&#43;08:00'>
+        
+    <meta name="Keywords" content="风行天下">
+    <meta name="description" content="HAproxy连接Mycat集群docker-compose版">
+        
+    <meta name="author" content="风行天下">
+    <meta property="og:url" content="http://yeves.cn/post/HAproxy%E8%BF%9E%E6%8E%A5Mycat%E9%9B%86%E7%BE%A4docker-compose%E7%89%88/">
+    <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/6ca784d1.js","daovoice")</script>
+
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://yeves.cn/">
+                        风行天下的博客
+                    </a>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://yeves.cn/">首页</a>
+                    
+                    <a  href="http://yeves.cn/tools/" title="工具">工具</a>
+                    
+                    <a  href="http://yeves.cn/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://yeves.cn/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#51-容器效果">5.1 容器效果</a></li>
+    <li><a href="#52-节点安全图">5.2 节点安全图</a></li>
+    <li><a href="#53-navicat连接图">5.3 navicat连接图</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">HAproxy连接Mycat集群docker-compose版</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年11月15日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='/categories/HAproxy'>HAproxy</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h1 id="1-前言">1. 前言</h1>
+<blockquote>
+<p>设置一个统一的入口来控制<code>mycat</code>集群，在这里我们使用到了<code>HAproxy</code>来做负载均衡和请求转发。</p>
+</blockquote>
+<h1 id="2-架构图">2. 架构图</h1>
+<p>
+        <img class="mx-auto" alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20200211153601387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTY3ODk5,size_16,color_FFFFFF,t_70#pic_center" />   
+    </p>
+<h1 id="3-配置haproxy">3. 配置HAproxy</h1>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 创建文件夹</span>
+cd /usr/local/docker
+mkdir haproxy/etc/haproxy -p
+<span style="color:#75715e"># 创建配置文件</span>
+cd /usr/local/docker/haproxy/etc/haproxy
+vim haproxy.cfg
+<span style="color:#75715e">## 输入下列内容 </span>
+<span style="color:#ae81ff">1234567</span>
+global
+	<span style="color:#75715e">#工作目录</span>
+	chroot /usr/local/etc/haproxy
+	<span style="color:#75715e">#日志文件，使用rsyslog服务中local5日志设备（/var/log/local5），等级info</span>
+	log 127.0.0.1 local5 info
+	<span style="color:#75715e">#守护进程运行</span>
+	daemon
+
+defaults
+	log	global
+	mode	http
+	<span style="color:#75715e">#日志格式</span>
+	option	httplog
+	<span style="color:#75715e">#日志中不记录负载均衡的心跳检测记录</span>
+	option	dontlognull
+    <span style="color:#75715e">#连接超时（毫秒）</span>
+	timeout connect <span style="color:#ae81ff">5000</span>
+    <span style="color:#75715e">#客户端超时（毫秒）</span>
+	timeout client  <span style="color:#ae81ff">50000</span>
+	<span style="color:#75715e">#服务器超时（毫秒）</span>
+    timeout server  <span style="color:#ae81ff">50000</span>
+
+<span style="color:#75715e">#监控界面	</span>
+listen  admin_stats
+	<span style="color:#75715e">#监控界面的访问的IP和端口(对应前端页面的端口访问，可以修改)</span>
+	bind  0.0.0.0:8888
+	<span style="color:#75715e">#访问协议</span>
+    mode        http
+	<span style="color:#75715e">#URI相对地址</span>
+    stats uri   /dbs
+	<span style="color:#75715e">#统计报告格式</span>
+    stats realm     Global<span style="color:#ae81ff">\ </span>statistics
+	<span style="color:#75715e">#登陆帐户信息</span>
+    stats auth  admin:123456
+<span style="color:#75715e">#数据库负载均衡</span>
+listen  proxy-mysql
+	<span style="color:#75715e">#访问的IP和端口</span>
+	bind  0.0.0.0:8889  
+    <span style="color:#75715e">#网络协议</span>
+	mode  tcp
+	<span style="color:#75715e">#负载均衡算法（轮询算法）</span>
+	<span style="color:#75715e">#轮询算法：roundrobin</span>
+	<span style="color:#75715e">#权重算法：static-rr</span>
+	<span style="color:#75715e">#最少连接算法：leastconn</span>
+	<span style="color:#75715e">#请求源IP算法：source </span>
+    balance  roundrobin
+	<span style="color:#75715e">#日志格式</span>
+    option  tcplog
+    <span style="color:#75715e">#对mycat节点进行负载均衡</span>
+
+    server  mycat_1 mycat:8066 check port  <span style="color:#ae81ff">8066</span> weight <span style="color:#ae81ff">1</span> maxconn <span style="color:#ae81ff">2000</span>
+    server  mycat_2 mycat02:8066 check port <span style="color:#ae81ff">8066</span>  weight <span style="color:#ae81ff">1</span> maxconn <span style="color:#ae81ff">2000</span>
+	<span style="color:#75715e">#使用keepalive检测死链</span>
+    option  tcpka
+<span style="color:#ae81ff">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="4-docker-composeyml">4. docker-compose.yml</h1>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cd /usr/local/docker/haproxy`
+`vim docker-compose.yml
+version: &#39;3&#39;
+services:
+  haproxy:
+    restart: always
+    image: haproxy:2.1.2
+    container_name: haproxy
+    ports:
+      - 8888:8888 # 端口来源于haproxy.cfg里面配置
+      - 8889:8889 # 统一的端口对mycat， haproxy.cfg里面配置
+    volumes:
+      - ./etc/haproxy:/usr/local/etc/haproxy:ro #ro 表示仅仅只能读
+
+networks:
+  default:
+    external:
+      name: mysql_network
+12345678910111213141516
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="5-效果图">5. 效果图</h1>
+<h2 id="51-容器效果">5.1 容器效果</h2>
+<p>
+        <img class="mx-auto" alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20200211154807172.png#pic_center" />   
+    </p>
+<h2 id="52-节点安全图">5.2 节点安全图</h2>
+<p>ip:port/dbs
+
+        <img class="mx-auto" alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20200211155209744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTY3ODk5,size_16,color_FFFFFF,t_70#pic_center" />   
+    </p>
+<h2 id="53-navicat连接图">5.3 navicat连接图</h2>
+<p>
+        <img class="mx-auto" alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20200211155326851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxOTY3ODk5,size_16,color_FFFFFF,t_70" />   
+    </p>
+<h1 id="6-补充说明">6. 补充说明</h1>
+<p>到现在你会发现。我们出现了一个新的负载均衡软件。
+那么我们来简单说说两者的区别。</p>
+<ol>
+<li><code>nginx</code>是一个<code>HTTP</code>服务器/反向代理服务器及电子邮件（<code>IMAP/POP3</code>）代理服务器。</li>
+<li><code>Nginx</code>跟 <code>HAproxy</code>其实他们两个的定位是有所不同的，<code>Nginx</code>的定位是一个<code>server</code>，<code>HAproxy</code>的定位是一个<code>load balancer</code>.</li>
+<li><code>HAproxy</code>负载均衡性能比<code>nginx</code>好，有一个状态统计页面，官方支持会话保持、健康检查等</li>
+</ol>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://yeves.cn/">风行天下</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://yeves.cn/post/HAproxy%E8%BF%9E%E6%8E%A5Mycat%E9%9B%86%E7%BE%A4docker-compose%E7%89%88/">http://yeves.cn/post/HAproxy%E8%BF%9E%E6%8E%A5Mycat%E9%9B%86%E7%BE%A4docker-compose%E7%89%88/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/mycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/">mycat读写分离</a></li>
+        
+        <li><a href="/post/mysql%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85/">mysql客户端连接</a></li>
+        
+        <li><a href="/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">kubenates 常用命令</a></li>
+        
+        <li><a href="/post/kubenete%E6%8F%92%E4%BB%B6/">kubenete zsh插件快捷键</a></li>
+        
+        <li><a href="/post/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/">hugo不蒜子统计数量</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='/tags/HAproxy'>HAproxy</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://yeves.cn/">风行天下的博客 By 风行天下</a>
+        
+        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备18010513号</a>
+        
+    </div>
+    <br />
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <i class="fa fa-user"></i>  <span id="busuanzi_value_site_pv"></span>|
+        <i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span>人次
+    </div>
+
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+<script>
+    daovoice('init', {
+        app_id: "6ca784d1"
+    });
+    daovoice('update');
+</script>
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://yeves.cn/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://yeves.cn/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://yeves.cn/post/HAproxy%E8%BF%9E%E6%8E%A5Mycat%E9%9B%86%E7%BE%A4docker-compose%E7%89%88/" title="HAproxy连接Mycat集群docker-compose版">HAproxy连接Mycat集群docker-compose版</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/mycat%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB/" title="mycat读写分离">mycat读写分离</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/mysql%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85/" title="mysql客户端连接">mysql客户端连接</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/Kubernetes%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/" title="kubenates 常用命令">kubenates 常用命令</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/kubenete%E6%8F%92%E4%BB%B6/" title="kubenete zsh插件快捷键">kubenete zsh插件快捷键</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/" title="hugo不蒜子统计数量">hugo不蒜子统计数量</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/hugo%E9%85%8D%E7%BD%AEdao%E8%81%8A%E5%A4%A9/" title="hugo网站配置聊天">hugo网站配置聊天</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/oh-my-zsh/" title="oh my zsh 安装">oh my zsh 安装</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/oh-my-zsh%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7/" title="oh my zsh 常用插件">oh my zsh 常用插件</a>
+    </li>
+    
+    <li>
+        <a href="http://yeves.cn/post/ssh%E9%98%B2%E5%BE%A1%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/" title="ssh防御暴力破解">ssh防御暴力破解</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/categories/'>分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://yeves.cn/categories/Go/">Go (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/HAproxy/">HAproxy (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Hugo/">Hugo (4)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Linux/">Linux (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/Nginx/">Nginx (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/dao/">dao (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/docker/">docker (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/git/">git (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/k8s/">k8s (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/mycat/">mycat (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/mysql/">mysql (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/shell/">shell (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/ssh/">ssh (4)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/sublime/">sublime (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/vim/">vim (2)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/zsh/">zsh (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E4%B8%8D%E8%92%9C%E5%AD%90/">不蒜子 (1)</a></li>
+    
+    <li><a href="http://yeves.cn/categories/%E5%B7%A5%E5%85%B7/">工具 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href='/tags/'>标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://yeves.cn/tags/Go/">Go</a>
+    
+    <a href="http://yeves.cn/tags/HAproxy/">HAproxy</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/dao/">dao</a>
+    
+    <a href="http://yeves.cn/tags/docker/">docker</a>
+    
+    <a href="http://yeves.cn/tags/git/">git</a>
+    
+    <a href="http://yeves.cn/tags/Hugo/">Hugo</a>
+    
+    <a href="http://yeves.cn/tags/k8s/">k8s</a>
+    
+    <a href="http://yeves.cn/tags/kubectl/">kubectl</a>
+    
+    <a href="http://yeves.cn/tags/linux/">linux</a>
+    
+    <a href="http://yeves.cn/tags/mycat/">mycat</a>
+    
+    <a href="http://yeves.cn/tags/mysql/">mysql</a>
+    
+    <a href="http://yeves.cn/tags/nginx/">nginx</a>
+    
+    <a href="http://yeves.cn/tags/oh-my-zsh/">oh my zsh</a>
+    
+    <a href="http://yeves.cn/tags/sougou/">sougou</a>
+    
+    <a href="http://yeves.cn/tags/ssh/">ssh</a>
+    
+    <a href="http://yeves.cn/tags/sublime/">sublime</a>
+    
+    <a href="http://yeves.cn/tags/vim/">vim</a>
+    
+    <a href="http://yeves.cn/tags/zsh/">zsh</a>
+    
+    <a href="http://yeves.cn/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/">不蒜子</a>
+    
+    <a href="http://yeves.cn/tags/%E4%B8%BB%E9%A2%98/">主题</a>
+    
+    <a href="http://yeves.cn/tags/%E6%8F%90%E5%8F%96%E7%A0%81/">提取码</a>
+    
+    <a href="http://yeves.cn/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/">百度网盘</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.cnblogs.com/brady-wang/" title="博客园">博客园</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://yeves.cn/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Tags on 风行天下的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 14 Nov 2020 23:17:34 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 10:31:08 +0800</lastBuildDate><atom:link href="http://yeves.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HAproxy</title>
+      <link>http://yeves.cn/tags/HAproxy/</link>
+      <pubDate>Sun, 15 Nov 2020 10:31:08 +0800</pubDate>
+      
+      <guid>http://yeves.cn/tags/HAproxy/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>mycat</title>
       <link>http://yeves.cn/tags/mycat/</link>
