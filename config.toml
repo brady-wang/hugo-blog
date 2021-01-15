@@ -25,7 +25,7 @@ summaryLength = 140
   busuanzi = true #启用不算子网页统计
   googleAd = ""  #ca-pub-xxxxxxxxxxxxxx
   localSearch = true # 启用本地搜索
-  beian = "粤ICP备18010513号"
+  beian = "粤ICP备18010513号-2"
 
   # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
   toc = false  # 是否开启目录
